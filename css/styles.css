@@ -1,16 +1,28 @@
-body {margin: 0 auto;}
-
-.cover {
-  border: 1px solid #000;
-  height: 500px;
-  width: 500px;
-  display: inline-block;
-  margin: 50px 50px 50px 50px;
+body {
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
 }
 
 .container {
-  width: 1300px;
+  /*width: 1300px;*/
   margin: 0 auto;
   text-align: center;
-
 }
+
+.squares {
+  border: 1px solid #000;
+  height: 400px;
+  width: 400px;
+  display: inline-block;
+  margin: 50px 50px 50px 50px;
+  padding: 50px;
+  vertical-align: middle;
+}
+
+h1 {font-size: 1.5em;}
+.cover ul {
+  list-style: none;
+}
+
+.bluebg {background-color: blue;}
