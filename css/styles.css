@@ -51,7 +51,8 @@ a:active{color: #000; text-decoration: none;}
   width: 100px;
   height: 100px;
   position: absolute;
-  float: left;
+  /*float: left;*/
+  border: solid black 1px;
 }
 
 .cloudComponent {
@@ -69,3 +70,27 @@ a:active{color: #000; text-decoration: none;}
 .bottoms {bottom: 0;}
 .mids {bottom: 15px;}
 .tops {bottom: 25px;}
+
+#rain {
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  /*float: left;*/
+  border: solid black 1px;
+}
+
+#rain span {
+  webkit-animation: fall;
+
+-webkit-animation: move_eye 4s linear 0s infinite alternate;
+     -moz-animation: move_eye 4s linear 0s infinite alternate;
+       -o-animation: move_eye 4s linear 0s infinite alternate;
+          animation: move_eye 4s linear 0s infinite alternate;
+}
+
+
+@-webkit-keyframes move_eye { from { margin-top:0; } to { margin-top:80px; }  }
+   @-moz-keyframes move_eye { from { margin-top:0; } to { margin-top:80px; }  }
+     @-o-keyframes move_eye { from { margin-top:0; } to { margin-top:80px; }  }
+        @keyframes move_eye { from { margin-top:0; } to { margin-top:80px; }  }
