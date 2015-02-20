@@ -1,28 +1,84 @@
 body {
   margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2em;
+  font-family: 'Abel', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
+  /*font-size: 1.5em;*/
+  /*font-weight: 100;*/
+  background-color: #fff;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Poiret One', cursive;
+  /*font-weight: 500;*/
+  /*font-size: 2em;*/
+}
+
+a:link{color: #000; text-decoration: none;}
+a:hover{color: #000; text-decoration: underline;}
+a:visited{color: #000; text-decoration: none;}
+a:active{color: #000; text-decoration: none;}
+
+
 .container {
-  /*width: 1300px;*/
   margin: 0 auto;
   text-align: center;
 }
 
 .squares {
-  border: 1px solid #000;
   height: 400px;
   width: 400px;
   display: inline-block;
   margin: 50px 50px 50px 50px;
   padding: 50px;
   vertical-align: middle;
+  background-color: #eee;
 }
 
-h1 {font-size: 1.5em;}
-.cover ul {
-  list-style: none;
+
+.cover ul, li {
+  /*list-style: none;*/
+  /*margin: 0 0 0 0;*/
 }
 
 .bluebg {background-color: blue;}
+
+
+/* edit #otherInterests list */
+
+/*#otherInterests ul {
+  margin: 0;
+  padding: 0;
+}
+
+#otherInterests li {
+  display: inline;
+  background-color: #f39;
+}*/
+
+/*#otherInterests {
+  height: 500px;
+  width: 500px;
+  padding: 0;
+  text-align: right;
+}*/
+
+
+
+
+
+
+/* do something cool with stars? */
+.stars5::after{
+  content: "*****"
+}
+.stars4::after{
+  content: "****"
+}
+.stars3::after{
+  content: "***"
+}
+.stars2::after{
+  content: "**"
+}
+.stars1::after{
+  content: "*"
