@@ -13,13 +13,6 @@ a:hover{color: #000; text-decoration: underline;}
 a:visited{color: #000; text-decoration: none;}
 a:active{color: #000; text-decoration: none;}
 
-#cloud {
-  width: 100px;
-  background: url('../cloud.png');
-  background-size: 100px;
-  position: absolute;
-  float: left;
-}
 
 .noCursor{
   cursor: none;
@@ -40,4 +33,39 @@ a:active{color: #000; text-decoration: none;}
   background-color: #eee;
 }
 
-.bluebg {background-color: blue;}
+.game {
+  width: 500px;
+  height: 500px;
+  padding: 0;
+}
+
+#miniGame {
+  width: 400px;
+  height: 400px;
+}
+
+/* make it rain */
+
+#cloud {
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  float: left;
+}
+
+.cloudComponent {
+  border-radius: 50%;
+  border: 1px solid #666666;
+  background-color: #666666;
+  position: absolute;
+}
+
+.bottoms, .mids, .tops {
+  margin-top: -3;
+  margin-left: -5px;
+}
+
+.bottoms {bottom: 0;}
+.mids {bottom: 15px;}
+.tops {bottom: 25px;}
