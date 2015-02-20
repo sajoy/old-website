@@ -13,6 +13,17 @@ a:hover{color: #000; text-decoration: underline;}
 a:visited{color: #000; text-decoration: none;}
 a:active{color: #000; text-decoration: none;}
 
+#cloud {
+  width: 100px;
+  background: url('../cloud.png');
+  background-size: 100px;
+  position: absolute;
+  float: left;
+}
+
+.noCursor{
+  cursor: none;
+}
 
 .container {
   margin: 0 auto;

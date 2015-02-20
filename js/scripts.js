@@ -1,10 +1,18 @@
 $(function(){
 
   $('#miniGame').hover(function() {
-    $(this).addClass('bluebg');
+    $('#cloud').show();
+    $('#miniGame').addClass('noCursor');
+
   }, function() {
-    $(this).removeClass('bluebg');
+    $('#cloud').hide();
   } );
+
+  $('#miniGame').mousemove(function(cloud) {
+    $('#cloud').css({
+      left: cloud.pageX, top: cloud.pageY + 10
+    });
+  });
 
 
 
