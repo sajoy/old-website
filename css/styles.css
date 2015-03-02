@@ -31,4 +31,6 @@ a:active{color: #000; text-decoration: none;}
 
 lh {font-style: italic;}
 
+img {width: inherit;}
+
 /*.bluebg {background-color: blue;}*/
