@@ -1,31 +1,27 @@
 var sajoy = angular.module('sajoy', ['ui.router']);
 
-sajoy.config(function($stateProvider) {
+sajoy.config(function($stateProvider, $urlRouterProvider) {
 
-  $stateProvider.state('home', {
-    url: "",
-    templateUrl: "partials/home.html"
+  $stateProvider.state('about', {
+    url: "/",
+    templateUrl: "partials/about.html"
   });
 
-  $stateProvider.state('home.about', {
-    url: "/about",
-    templateUrl: "partials/home.about.html"
-  });
-
-  $stateProvider.state('home.skills', {
+  $stateProvider.state('skills', {
     url: "/skills",
-    templateUrl: "partials/home.skills.html"
+    templateUrl: "partials/skills.html"
   });
 
-  $stateProvider.state('home.portfolio', {
+  $stateProvider.state('portfolio', {
     url: "/portfolio",
-    templateUrl: "partials/home.portfolio.html"
+    templateUrl: "partials/portfolio.html"
   });
 
-  $stateProvider.state('home.links', {
+  $stateProvider.state('links', {
     url: "/links",
-    templateUrl: "partials/home.links.html"
+    templateUrl: "partials/links.html"
   });
 
+  $urlRouterProvider.otherwise("/");
 
 });
