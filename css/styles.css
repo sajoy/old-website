@@ -1,11 +1,49 @@
 body {
   margin: 0 auto;
   font-family: 'Abel', sans-serif;
-  background-color: #fff;
+  background-color: #FFFFFF;
+}
+
+header {
+  background-color: #F93F93;
+  color: #FFFFFF;
+}
+
+.button {margin-bottom: 0; padding: 0 100px 0 100px;}
+
+.nav {height: auto;}
+.nav a:link{
+  color: #FFFFFF;
+  text-decoration: none;
+  border: solid #F93F93 3px;
+  /*width: 100px;*/
+}
+.nav a:visited{
+  color: #FFFFFF;
+  text-decoration: none;
+  border: solid #F93F93 3px;
+}
+.nav a:active{
+  color: #FFFFFF;
+  text-decoration: none;
+  border: solid #F93F93 3px;
+}
+.nav a:hover{
+  color: #F39;
+  background-color: #FFF;
+  text-decoration: none;
+  border: solid #fff 3px;
+  border-radius: 0;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Poiret One', cursive;
+}
+
+.name {
+  color: #FFFFFF;
+  font-size: 8em;
+  font-weight: bold;
 }
 
 a:link{color: #000; text-decoration: none;}
@@ -13,24 +51,13 @@ a:hover{color: #000; text-decoration: underline;}
 a:visited{color: #000; text-decoration: none;}
 a:active{color: #000; text-decoration: none;}
 
-
 .container {
   margin: 0 auto;
   text-align: center;
 }
 
-.squares {
-  height: 400px;
-  width: 400px;
-  display: inline-block;
-  margin: 50px 50px 50px 50px;
-  padding: 50px;
-  vertical-align: middle;
-  background-color: #eee;
+.stripes {
+  background-color: #FFFFFF;
+  height: 15px;
+  /*margin-bottom: 20px;*/
 }
-
-lh {font-style: italic;}
-
-img {width: inherit;}
-
-/*.bluebg {background-color: blue;}*/
