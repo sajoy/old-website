@@ -74,7 +74,14 @@ section {
   text-align: left;
 }
 
-.pink {
-  background-color: #F93F93;
-  height: 500px;
+dd {
+  /*font-style: italic;*/
+  color: #7E7E7E;
 }
+
+.black {color: #000000;}
+
+dd a:link{color: #7E7E7E; text-decoration: none;}
+dd a:hover{color: #7E7E7E; text-decoration: underline;}
+dd a:visited{color: #7E7E7E; text-decoration: none;}
+dd a:active{color: #7E7E7E; text-decoration: none;}
