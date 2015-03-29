@@ -5,6 +5,7 @@ body {
 }
 
 img {float: left; width: 300px;}
+
 header {
   background-color: #F93F93;
   color: #FFFFFF;
@@ -13,10 +14,17 @@ header {
 h1, h2, h3, h4 {
   font-family: 'Poiret One', cursive;
 }
+
 a:link{color: #000; text-decoration: none;}
 a:hover{color: #000; text-decoration: underline;}
 a:visited{color: #000; text-decoration: none;}
 a:active{color: #000; text-decoration: none;}
+
+.name {
+  color: #FFFFFF;
+  font-size: 8em;
+  font-weight: bold;
+}
 
 .button {
   margin-bottom: 0;
@@ -52,20 +60,14 @@ a:active{color: #000; text-decoration: none;}
   border-radius: 0;
 }
 
-.name {
-  color: #FFFFFF;
-  font-size: 8em;
-  font-weight: bold;
+.stripes {
+  background-color: #FFFFFF;
+  height: 15px;
 }
 
 .container {
   margin: 0 auto;
   text-align: center;
-}
-
-.stripes {
-  background-color: #FFFFFF;
-  height: 15px;
 }
 
 section {
@@ -75,7 +77,6 @@ section {
 }
 
 dd {
-  /*font-style: italic;*/
   color: #7E7E7E;
 }
 
