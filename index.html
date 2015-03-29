@@ -1,8 +1,13 @@
 <!doctype html>
-<html>
+<html lang="en" ng-app="sajoy">
   <head>
     <meta charset="utf-8">
     <title>sajoy.github.io</title>
+
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+
     <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
@@ -16,38 +21,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1 class="name">SARAH JOY</h1>
-        <div class="stripes"></div>
-        <div class="nav">
-          <a href="#" class="button"> about </a>
-          <a href="#" class="button"> skills </a>
-          <a href="#" class="button"> portfolio </a>
-          <a href="#" class="button"> links </a>
-        </div>
-      </header>
-      <div class="row">
-
-        <div class="four columns">
-          <p>
-            Hello world!
-            My name is Sarah Joy Calpo. I'm a soon to be graduate of <a href="https://www.epicodus.com" target="_blank">Epicodus</a>,
-            a full-time, 4 month coding bootcamp in Portland, OR.
-          </p>
-        </div>
-        <div class="four columns">
-          <p>
-            column 2
-          </p>
-        </div>
-        <div class="four columns">
-          <p>
-          column 3
-          </p>
-        </div>
-
-
-      </div>
+      <div ui-view> </div>
     </div>
   </body>
 </html>
