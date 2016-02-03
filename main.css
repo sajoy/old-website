@@ -1,41 +1,14 @@
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    padding: 2em;
+footer {
+    margin-top: 20px;
+    background-color: #f39;
+    padding: 10px;
+    text-align: center;
+    font-family: monospace;
+    box-shadow: #151515 0 0 5px 0;
 }
 
-h1 {
-    margin-bottom: 0;
-}
-
-h1 a {
-    color: black;
+footer a {
     text-decoration: none;
+    border-bottom: dashed #000 1px;
+    color: #000;
 }
-
-h1 a:hover {
-    background-color: greenyellow;
-}
-
-h3 {
-    margin: 0;
-    padding-left: 1em;
-    color: slategray;
-    font-weight: normal;
-}
-
-sup {
-    font-weight: 200;
-}
-
-ul {
-    list-style: circle;
-    line-height: 1em;
-}
-
-a {
-    color: deeppink;
-}
-
-section.table-of-contents a { color: black; }
-
-/*# sourceMappingURL=C:\Users\Joy\Documents\code\sajoy.github.io\.gobble-build\02-include\1\main.css.map */
