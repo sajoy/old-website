@@ -2,9 +2,15 @@ footer {
     margin-top: 20px;
     background-color: #f39;
     padding: 10px;
-    text-align: center;
     font-family: monospace;
     box-shadow: #151515 0 0 5px 0;
+    position: fixed;
+    bottom: 20px;
+    left: -120px;
+}
+
+footer:hover {
+    left: 0;
 }
 
 footer a {
