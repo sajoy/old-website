@@ -3,59 +3,129 @@
     <head>
         <meta charset="utf-8">
         <title>Sarah Joy Calpo</title>
-        <link href='main.css' rel="stylesheet"/>
+        <link href='main.css' rel="stylesheet"/> <!--- footer css -->
+        <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
         <style>
             body {
                 height: 100vh;
                 width: 100%;
                 margin: 0;
-                background-color: #EEE;
-                overflow-x: hidden;
+                background-color: #eee;
+                color: #666;
             }
 
-            img {
-                width: 100vw;
+            a {
+                text-decoration: none;
+                color: #666;
+            }
+
+            #thanks {
+                margin: 0;
+                cursor: pointer;
+            }
+
+            #chair {
+                width: 300px;
+                position: fixed;
+                bottom: 0;
+                left: 10%;
+            }
+
+            #faux-screen {
+                margin-top: 10%;
+                margin-bottom: 15%;
+            }
+
+            article {
+                margin: 10px auto;
+                padding-top: 200px;
+                height: 60%;
+                min-height: 300px;
+                width: 65%;
+                min-width: 250px;
+            }
+
+            article img {
+                box-shadow: #d3d3d3 0px 0px 4px 1px;
+                width: 100%;
                 margin: 0;
             }
 
-            .about {
-                margin: 10px auto;
-                height: 800px;
-                width: 800px;
-                background-color: white;
-                box-shadow: #d3d3d3 0px 0px 4px 1px;
-                padding: 50px;
+            .article-link, p {
+                display: block;
+                text-align: right;
             }
 
-            .about:focus {
+            #intro {
+                font-family: 'Abril Fatface';
+                color: #333;
+                box-shadow: initial;
+            }
+
+            #intro a {
+                color: #333;
+                text-decoration: none;
+            }
+
+
+            /* google doc */
+            /*#write {
+                background-color: white;
+            }*/
+
+            /*#write:focus {
                 outline-color: transparent;
                 outline-style: none;
-            }
+            }*/
+
         </style>
     </head>
     <body>
-        <img src='images/header.gif'/>
-        <article contenteditable="true" class='about'>
-            <ol>
-                <li>Hi! I'm <a href='mailto:sajoy.pc+hello@gmail.com'>Sarah Joy.</a></li>
-                <li>I really like making lists.</li>
-                <li>Things I want to do more often:
-                    <ol>
-                    <li>write letters</li>
-                    <li>dance (improv, hip hop, modern, with my SO)</li>
-                    <li>see more places, people, ideas, sunsets</li>
-                    <li>create (apps? art? fiction? cake?)  </li>
-                    <li>accumulate</li>
-                    </ol>
-                </li>
-            </ol>
-        </article>
-        <footer>
-            <a href='/'>home</a>
-            <a href='about'>about</a>
-            <a href='/essays'>blog</a>
-            <a href='http://sj.neocities.org/'>quotes to live by</a>
-            &hearts; <a href='http://twitter.com/superissarah'>sj</a>
-        </footer>
+        <section id='faux-screen'>
+            <article id='intro'>
+                <h2>Hi! I'm Sarah Joy. I spend too much time on my laptop.</h2>
+                <h2>
+                    <a href='#write'>I write.</a>
+                    <a href='#webdev'>I code for $$$.</a>
+                    <a href='#creative'>I code for fun. </a>
+                    <a href='#social'>I lollygag.</a>
+                </h2>
+            </article>
+
+            <article id='write'>
+                <!-- eventually: link to published work, for now to medium? -->
+                <img src='images/howto-major.gif'/>
+                <a class='article-link' href='https://medium.com/@sarahjoy'>
+                    I write. | medium.com/@sarahjoy
+                </a>
+            </article>
+
+
+            <article id='webdev'>
+                <img src='images/doit.gif'/>
+                <a class='article-link' href='http://cardsmith.co'>
+                    I code for $$$. | cardsmith.co
+                </a>
+            </article>
+
+            <article id='creative'>
+                <!-- eventually: link to project page
+                     projects: magicmillennial, themostawful, catrospect
+                -->
+                <img src='images/sadness.gif'/>
+                <a class='article-link' href='http:/themostawful.com'>
+                    I code for fun. | themostawful.com
+                </a>
+            </article>
+
+            <article id='social'>
+                <!-- links to twitter, linkedin, github, email -->
+                <img src='images/buzz.gif'/>
+                <p id='thanks'>
+                    I lollygag. | thanks for stopping by :)
+                </p>
+            </article>
+        </section>
+        <img id='chair' src='images/chair.png'>
     </body>
 </html>
