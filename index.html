@@ -2,83 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Sarah Joy Calpo</title>
-        <link href='main.css' rel="stylesheet"/> <!--- footer css -->
+        <title>Sarah Joy</title>
+        <link href='main.css' rel="stylesheet"/>
         <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                height: 100vh;
-                width: 100%;
-                margin: 0;
-                background-color: #eee;
-                color: #666;
-            }
-
-            a {
-                text-decoration: none;
-                color: #666;
-            }
-
-            #thanks {
-                margin: 0;
-                cursor: pointer;
-            }
-
-            #chair {
-                width: 300px;
-                position: fixed;
-                bottom: 0;
-                left: 10%;
-            }
-
-            #faux-screen {
-                margin-top: 10%;
-                margin-bottom: 15%;
-            }
-
-            article {
-                margin: 10px auto;
-                padding-top: 200px;
-                height: 60%;
-                min-height: 300px;
-                width: 65%;
-                min-width: 250px;
-            }
-
-            article img {
-                box-shadow: #d3d3d3 0px 0px 4px 1px;
-                width: 100%;
-                margin: 0;
-            }
-
-            .article-link, p {
-                display: block;
-                text-align: right;
-            }
-
-            #intro {
-                font-family: 'Abril Fatface';
-                color: #333;
-                box-shadow: initial;
-            }
-
-            #intro a {
-                color: #333;
-                text-decoration: none;
-            }
-
-
-            /* google doc */
-            /*#write {
-                background-color: white;
-            }*/
-
-            /*#write:focus {
-                outline-color: transparent;
-                outline-style: none;
-            }*/
-
-        </style>
     </head>
     <body>
         <section id='faux-screen'>
@@ -93,21 +19,17 @@
             </article>
 
             <article id='write'>
-                <!-- eventually: link to published work, for now to medium? -->
                 <img src='images/howto-major.gif'/>
                 <a class='article-link' href='https://medium.com/@sarahjoy'>
                     I write. | medium.com/@sarahjoy
                 </a>
             </article>
-
-
             <article id='webdev'>
                 <img src='images/doit.gif'/>
                 <a class='article-link' href='http://cardsmith.co'>
                     I code for $$$. | cardsmith.co
                 </a>
             </article>
-
             <article id='creative'>
                 <!-- eventually: link to project page
                      projects: magicmillennial, themostawful, catrospect
@@ -117,15 +39,21 @@
                     I code for fun. | themostawful.com
                 </a>
             </article>
-
             <article id='social'>
-                <!-- links to twitter, linkedin, github, email -->
                 <img src='images/buzz.gif'/>
                 <p id='thanks'>
                     I lollygag. | thanks for stopping by :)
                 </p>
             </article>
+
+            <div id='contact'>
+                <a href='http://twitter.com/superissarah'>twitter</a> |
+                <a href='mailto:sajoy.pc+hello@gmail.com'>email</a> |
+                <a href='https://www.linkedin.com/in/sarahjoycalpo'>linkedin</a> |
+                <a href='http://github.com/sajoy'>github</a>
+            </div>
         </section>
         <img id='chair' src='images/chair.png'>
+        <script src="gratitude.js"></script>
     </body>
 </html>
