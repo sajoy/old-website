@@ -20,6 +20,10 @@ a {
     color: #666;
 }
 
+a:hover {
+    font-style: italic;
+}
+
 #chair {
     width: 300px;
     position: fixed;
@@ -38,6 +42,7 @@ article {
     padding-bottom: 50px;
     width: 65%;
     min-width: 250px;
+    text-align: right;
 }
 
 article img {
@@ -46,9 +51,8 @@ article img {
     margin: 0;
 }
 
-.article-link, p {
-    display: block;
-    text-align: right;
+.article-link, article span, p {
+    display: inline-block;
 }
 
 /*                                      specific sections  */
@@ -59,6 +63,7 @@ article img {
     box-shadow: initial;
     height: 350px;
     letter-spacing: .2px;
+    text-align: left;
 }
 
 #intro a {
@@ -71,14 +76,18 @@ article img {
     cursor: pointer;
 }
 
+#thanks:hover {
+    font-style: italic;
+}
+
 #contact {
     text-align: center;
     margin-top: 150px;
 }
 
-#contact a:hover {
+/*#contact a:hover {
     font-style: italic;
-}
+}*/
 
 /*                                                                     thanks */
 
