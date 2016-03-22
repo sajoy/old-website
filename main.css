@@ -1,6 +1,7 @@
 /*                                             search terms
 
 - specific sections
+- thanks
 - mobile
 
 */
@@ -11,6 +12,7 @@ body {
     margin: 0;
     background-color: #eee;
     color: #666;
+    font-size: 16px;
 }
 
 a {
@@ -78,16 +80,57 @@ article img {
     font-style: italic;
 }
 
+/*                                                                     thanks */
+
+#gratitude {
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    background-color: rgba( 280, 0, 100, .8 );
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+#gratitude.showit {
+    display: block;
+}
+
+#gratitude h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+#close {
+    position: absolute;;
+    top: 10px; right: 30px;
+    color: white;
+    font-size: 50px;
+    font-family: monospace;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.gratitude {
+    color:  rgba( 280, 0, 100, .8 );
+    font-size: 20px;
+    text-shadow: .5px .5px 0 white, -0.5px -1px 0 white;
+}
+
 /*                                                     mobile  */
 
-@media ( max-width: 800px ) {
+@media only screen and ( max-width: 800px ) {
     #chair { width: 250px; }
     #contact { text-align: right; margin-right: 4px; }
     #contact a { display: block; }
+    #gratitude h1 { font-size: 4em; }
     article { width: 80%; }
 }
 
-@media ( max-height: 400px ) {
+@media only screen and( max-height: 400px ) {
     #faux-screen { margin-top: 0; }
     #intro { padding-top: 50px; }
     #chair { bottom: -80px; }
