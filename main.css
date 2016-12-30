@@ -107,6 +107,7 @@ article img {
 #overlay h1, #overlay a {
     font-size: 5em;
     margin: 0;
+    text-align: center;
 }
 
 #gratitude {
@@ -129,10 +130,26 @@ article img {
     display: none;
     opacity: 0;
     transition: opacity .5s ease-out;
+    padding: initial;
+}
 
-    a {
-        display: block;
-    }
+#menu a {
+    display: block;
+    color: white;
+}
+
+#menu div.icons {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+#menu .icons a {
+    font-size: 1.5em;
+    display: inline;
+}
+
+#menu .icons a:hover {
+    font-style: normal;
 }
 
 #overlay.showit,
