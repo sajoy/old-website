@@ -80,18 +80,18 @@ article img {
     font-style: italic;
 }
 
-#contact {
-    text-align: center;
-    margin-top: 150px;
+#nav {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 3em;
+    font-weight: bold;
 }
-
-/*#contact a:hover {
-    font-style: italic;
-}*/
 
 /*                                                                     thanks */
 
-#gratitude {
+#overlay {
     position: fixed;
     top: 0; bottom: 0;
     left: 0; right: 0;
@@ -104,13 +104,15 @@ article img {
     transition: opacity .5s ease-out;
 }
 
-#gratitude.showit {
-    display: block;
-}
-
-#gratitude h1 {
+#overlay h1, #overlay a {
     font-size: 5em;
     margin: 0;
+}
+
+#gratitude {
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-out;
 }
 
 #close {
@@ -123,19 +125,35 @@ article img {
     cursor: pointer;
 }
 
+#menu {
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+
+    a {
+        display: block;
+    }
+}
+
+#overlay.showit,
+#gratitude.showit,
+#menu.showit {
+    display: block;
+}
+/*
 .gratitude {
     color:  rgba( 280, 0, 100, .8 );
     font-size: 20px;
     text-shadow: .5px .5px 0 white, -0.5px -1px 0 white;
-}
+}*/
 
 /*                                                     mobile  */
 
 @media only screen and ( max-width: 800px ) {
     #chair { width: 250px; }
-    #contact { text-align: right; margin-right: 4px; }
-    #contact a { display: block; }
-    #gratitude h1 { font-size: 4em; }
+    /*#nav { text-align: right; margin-right: 4px; }
+    #nav a { display: block; }*/
+    #overlay h1 { font-size: 4em; }
     article { width: 80%; }
 }
 
