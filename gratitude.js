@@ -9,9 +9,11 @@ window.onload = function () {
     targets.forEach( target => {
         var thanks = target == 'thanks',
         ele = thanks ? reminder : menu;
-        document.getElementById( target ).addEventListener( 'click', () => {
-            toggle( ele, thanks );
-        });
+        if ( document.getElementById( target ) ) {    
+            document.getElementById( target ).addEventListener( 'click', () => {
+                toggle( ele, thanks );
+            });
+        }
     })
 
     function toggle ( ele, thanks ) {
