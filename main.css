@@ -34,6 +34,7 @@ a:hover {
 #faux-screen {
     margin-top: 7%;
     margin-bottom: 5%;
+    padding-bottom: 200px;
 }
 
 article {
@@ -157,19 +158,11 @@ article img {
 #menu.showit {
     display: block;
 }
-/*
-.gratitude {
-    color:  rgba( 280, 0, 100, .8 );
-    font-size: 20px;
-    text-shadow: .5px .5px 0 white, -0.5px -1px 0 white;
-}*/
 
 /*                                                     mobile  */
 
 @media only screen and ( max-width: 800px ) {
     #chair { width: 250px; }
-    /*#nav { text-align: right; margin-right: 4px; }
-    #nav a { display: block; }*/
     #overlay h1 { font-size: 4em; }
     article { width: 80%; }
 }
