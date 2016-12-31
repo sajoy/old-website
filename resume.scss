@@ -1,17 +1,12 @@
 // $light-gray: #a8a8a8;
 
-html {
-    background-color: #eee;
-}
-
 body {
     width: 75%;
     max-width: 1000px;
     background-color: white;
-    box-shadow: #d3d3d3 0px 0px 4px 1px;
+    margin: 0 auto;
 
-    padding: 20px;
-    padding-left: 80px;
+    padding: 80px;
 }
 
 ul {
@@ -28,10 +23,6 @@ ul {
 .not-bold {
     font-weight: normal;
 }
-
-// .light-gray {
-//     color: $light-gray;
-// }
 
 header {
     h1 {
@@ -93,22 +84,10 @@ main {
 
     #experience {
         h4 {
-            // font-size: 1.3em;
             margin-bottom: 5px;
         }
         .details {
             margin-top: 0;
         }
-    }
-}
-
-@media only screen and ( max-width: 600px ) {
-    html {
-        background-color: white;
-    }
-
-    body {
-        padding-left: 20px;
-        box-shadow: none;
     }
 }
