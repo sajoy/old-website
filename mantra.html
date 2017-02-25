@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>talk to me</title>
+    <link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+
+      /*
+        pink: #EF6F6C
+        light blue: #B3FFFC
+        dark blue: #645DD7
+        purplypink: #FB62F6
+        yellow: #F2FF49
+
+
+
+        todo:
+        - when typing into main:
+          - change to yellow bg, black text ( caution tape )
+          - mix up the classes?
+          - marquee something
+
+        - easter egg: type in cat
+          - show gif of midnight- everywhere.
+
+      */
+
+      @font-face {
+        font-family: 'Rosette';
+        src: url('rosette.ttf')  format('truetype');
+      }
+      @font-face {
+        font-family: 'SoldOut';
+        src: url('WCSoldOut.woff')  format('woff');
+      }
+
+      body {
+        font-family: arial;
+      }
+
+      body * {
+        margin: 0;
+      }
+
+      #expressyoself .chaos {
+        float: left;
+      }
+
+      .main {
+        background-color: #EF6F6C;
+        padding-left: 10px;
+      }
+
+      .main h2 {
+        font-size: 4em;
+        text-transform: uppercase;
+        color: white;
+        font-family: fantasy, monospace;
+      }
+
+      .main h2::selection {
+        background-color: transparent;
+        color: #EF6F6C;
+      }
+
+      [contenteditable='true']:active, [contenteditable='true']:focus {
+        border: none;
+        outline: none;
+      }
+
+      .red {
+        color: #F2FF49;
+        font-size: 8px;
+        font-family: sans-serif;
+        width: 80px;
+        text-align: justify;
+        /*align-self: stretch;*/
+      }
+
+      .red p::selection {
+        background-color: white;
+        color: white;
+      }
+
+      .red span::selection {
+        color: red;
+      }
+
+      .orange {
+        margin-top: 100px;
+        font-family: 'Homemade Apple', cursive;
+        color: transparent;
+        text-shadow: 0px 100px 70px #000,
+                     -50px 60px 10px #FB62F6,
+                     10px -10px 30px #645DD7;
+        font-size: 10em;
+        line-height: 100px;
+        width: 800px;
+      }
+
+      .orange p::selection {
+        color: black;
+      }
+
+      .yellow {
+        background-color: rgba( 200, 110, 10, .3);
+        color: rgba( 200, 110, 10, .3);
+        position: fixed;
+        top: 400px;
+        right: 200px;
+        width: 300px;
+        padding: 8% 0 0 8%;
+        font-family: 'SoldOut', monospace;
+      }
+
+      .yellow p::selection {
+        text-shadow: 20px 100px 0px rgba( 200, 110, 10, .3),
+                    -100px -120px 0px rgba( 200, 110, 10, .3);
+      }
+
+      .green {
+        animation-duration: 30s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+      }
+
+      .green p::selection {
+        background-color: black;
+      }
+
+      @keyframes rotate {
+         0% {
+          transform: rotate(0deg);
+          letter-spacing: 10px;
+        }
+
+        50% {
+          transform: rotate(180deg);
+          letter-spacing: 100px;
+        }
+
+        100% {
+          transform: rotate(360deg);
+          letter-spacing: 10px;
+        }
+      }
+
+      .blue {
+        position: fixed;
+        top: 200px;
+        right: 300px;
+        height: 200px;
+        background-color: rgba( 255, 255, 0, .5 );
+        font-size: 36px;
+        transform: rotate( 180deg );
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      .blue p::selection {
+        color: white;
+        text-shadow: 20px 20px 0px white,
+                    -20px -20px 0px white;
+      }
+
+      .purple {
+        position: absolute;
+        bottom: 0;
+        font-size: 50em;
+        line-height: 100px;
+        letter-spacing: -100px;
+        z-index: -1;
+      }
+
+      #midnight {
+        position: fixed;
+        right: 150px;
+        top: 200px;
+      }
+
+      .stars {
+        background-image: url('http://38.media.tumblr.com/7eeda60173cd0b79914c8071a86fe059/tumblr_mxypvkEra41stsnmgo1_1280.gif');
+        height: 100vh;
+      }
+
+      .puddles {
+        z-index: 100;
+        color: #B3FFFC;
+        position: absolute;
+        font-size: 100px;
+        margin: 0;
+        top: -400px;
+        animation-duration: 3s;
+        animation-name: fall;
+        animation-iteration-count: infinite;
+        display: block;
+        background-color: #B3FFFC;
+        border-radius: 50%;
+      }
+
+      @keyframes fall {
+        0% {
+          top: 0;
+        }
+
+        50% {
+          top: 500px;
+        }
+
+        100% {
+          top: 1000px;
+        }
+      }
+
+      .alphabet-district { left: 80px; animation-delay: 16s;}
+      .nw { left: 180px; animation-delay: 0;}
+      .sw { left: 400px; animation-delay: 3s;}
+      .se { left: 980px; animation-delay: 5s;}
+      .hawthorne { left: 5px; animation-delay: 1s;}
+      .fremont  { left: 170px animation-delay: 3s;}
+      .division { left: 300px; animation-delay: 8s;}
+      .alberta { left: 350px; animation-delay: 10s;}
+      .downtown { left: 570px; animation-delay: 14s;}
+      .north { left: 90px; animation-delay: 12s;}
+      .steel { left: 700px; animation-delay: 2s;}
+      .the-peoples { left: 758px; animation-delay: 0s;}
+      .morrison { left: 800px; animation-delay: 5s;}
+      .st-john { left: 860px; animation-delay: 7s;}
+      .willamette { left: 1000px; animation-delay: 1s;}
+    </style>
+  </head>
+  <body>
+
+    <section id='expressyoself'></section>
+
+    <script id='quoteme' type='text/ractive'>
+    <section id='universe'{{#if thirsty}}class='stars'{{/if}}>
+      {{#if letitRain}}
+        <span class='puddles alphabet-district'>.</span>
+        <span class='puddles nw'>.</span>
+        <span class='puddles sw'>.</span>
+        <span class='puddles se'>.</span>
+        <span class='puddles hawthorne'>.</span>
+        <span class='puddles fremont'>.</span>
+        <span class='puddles division'>.</span>
+        <span class='puddles alberta'>.</span>
+        <span class='puddles downtown'>.</span>
+        <span class='puddles north'>.</span>
+        <span class='puddles steel'>.</span>
+        <span class='puddles the-peoples'>.</span>
+        <span class='puddles morrison'>.</span>
+        <span class='puddles st-john'>.</span>
+        <span class='puddles willamette'>.</span>
+      {{/if}}
+      <div class='main'>
+        <h2 id='editme' value={{.text}} contenteditable='true' autofocus>{{.text}}</h2>
+      </div>
+      <div class='{{#if calm}}calm{{else}}red chaos{{/if}}'>
+        <p>
+          {{.text}}{{.text}} <span>&hearts;</span> {{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}
+          {{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}} <span>&hearts;</span> {{.text}}{{.text}}{{.text}}
+          {{.text}}{{.text}}{{.text}} <span>&hearts;</span> {{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}{{.text}}
+        </p>
+      </div>
+     <div class='orange chaos'><p>{{.text}}</p></div>
+     <div class='yellow'><p>{{.text}}</p></div>
+     <div class='green'><p>{{.text}}</p></div>
+     <div class='blue'><p>{{.text}}</p></div>
+     <div class='purple'><marquee behavior='alternate'>{{.text}}</marquee></div>
+
+     {{#if meow}}
+        <img id='midnight' src='http://33.media.tumblr.com/594d7302e12864abb8d3dbd8083fe6c1/tumblr_mztc4cNZhl1stsnmgo1_500.gif'/>
+     {{/if}}
+
+    </section>
+    </script>
+
+    <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+
+    <script>
+      var ractive = new Ractive({
+        el: '#expressyoself',
+        template: '#quoteme',
+        onrender () {
+          var quote = this.find('#editme'),
+              selected = window.getSelection();
+          selected.collapse( quote.firstChild, 45 );
+
+          this.observe( 'text', function ( text ) {
+            if ( this.exists( text, 'cat' ) || this.exists( text, 'meow' ) ) {
+              this.set( 'meow', true );
+            } else {
+              this.set( 'meow' );
+            }
+
+            if ( this.exists( text, 'tea' ) || this.exists( text, 'universe' ) ) {
+              this.set( 'thirsty', true )
+            } else {
+              this.set( 'thirsty' );
+            }
+
+            if ( this.exists( text, 'portland' ) || this.exists( text, 'pdx' ) ) {
+              this.set( 'letitRain', true )
+            } else {
+              this.set( 'letitRain' );
+            }
+          });
+        },
+        data: {
+          text: "There's no such thing as a cautious creative.",
+          calm: false,
+          meow: false,
+          thirsty: false,
+          letitRain: false
+        },
+        exists ( text, phrase ) {
+          return text.indexOf( phrase ) !== -1;
+        }
+      });
+    </script>
+
+  </body>
+</html>
