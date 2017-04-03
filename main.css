@@ -165,6 +165,9 @@ article img {
     margin: 100px auto;
     width: 80%
 }
+#updates sub {
+    color: darkgray;
+}
 
 
 /*                                                     mobile  */
