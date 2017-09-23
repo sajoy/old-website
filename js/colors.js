@@ -23,22 +23,16 @@ function randomizePalette () {
             lightest: '#F2F5DE',
          }
     ]; 
-    const selectedPalette = palettes[Math.floor(Math.random() * (palettes.length))]; 
-    
+
+    const selectedPalette = palettes[randNum(0, palettes.length - 1)]; 
+
     colorVars.forEach( cssVar => {
-        console.log( cssVar );
-        console.log( selectedPalette );
-        console.log( selectedPalette[cssVar.key] );
         document.documentElement.style.setProperty( cssVar.val, selectedPalette[cssVar.key] );
     });
 
 }
 
 randomizePalette();
-
-function randomNum () {
-  //The maximum is inclusive and the minimum is inclusive 
-}
 
 function Palette ( lightest, light, highlight, medium, dark ) {
     this.lightest = lightest;

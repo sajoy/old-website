@@ -32,6 +32,8 @@ body {
     background-color: var(--dark-color);
     color: var(--light-color);
     font-size: 16px;
+
+    cursor: crosshair;
 }
 
 a {
@@ -46,6 +48,17 @@ a:hover {
 .article-link, article span, p {
     display: inline-block;
 }
+
+
+
+
+/*           clouds  */
+#cloud {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+
 
 
 /*           updates */
