@@ -51,10 +51,8 @@ main {
     position: fixed;
     top: 100px;
     left: 200px;
-}
 
-.large {
-    font-size: 2rem;
+    line-height: 1.5rem;
 }
 
 ol[contenteditable="true"] {
@@ -66,10 +64,6 @@ ol[contenteditable="true"]:focus {
     outline: none;
     background-color: rgba( 255, 255, 255, .2);
 }
-
-/* ol[contenteditable="true"] ul li {
-    text-decoration: underline;
-}     */
 
 a {
     text-decoration: none;
@@ -102,7 +96,11 @@ a:hover {
     text-align: center;
 }
 
-
+/*           todo  */
+.done {
+    text-decoration: line-through;
+    opacity: .5;
+}
 
 /*           clouds  */
 #cloud {
