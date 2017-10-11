@@ -17,6 +17,12 @@ https://coolors.co/ff91bb-a68dc4-7fffdf-f4fff9-ffffff
 
 */
 
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
 :root {
     --dark-color: #A68DC4;
     --lightest-color: #ffffff;
@@ -26,15 +32,16 @@ https://coolors.co/ff91bb-a68dc4-7fffdf-f4fff9-ffffff
 }
 
 body {
-    height: 100vh;
-    width: 100%;
+    height: 100%;
     margin: 0;
     background-color: var(--dark-color);
     color: var(--light-color);
     font-size: 16px;
-
+    
     cursor: crosshair;
     overflow: hidden;
+    box-sizing: border-box;
+    border: solid 15px var(--lightest-color);
 }
 
 h1 {
@@ -48,11 +55,12 @@ h1 {
 }
 
 main {
-    position: fixed;
-    top: 100px;
-    left: 200px;
-
     line-height: 1.5rem;
+
+    padding: 10%;
+    height: 100%;
+    overflow: scroll;
+
 }
 
 ol[contenteditable="true"] {
@@ -145,4 +153,19 @@ a:hover {
 
 #updates sup {
     border-bottom: solid var(--light-color) 2px;
+}
+
+
+/*                             magnets */
+.magnet {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-family: serif;
+
+    box-shadow: 1px 1px 1px 1px black;
+
+    cursor: -webkit-grab;
+
+    position: absolute;
 }
