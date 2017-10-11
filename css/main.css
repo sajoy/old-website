@@ -61,6 +61,25 @@ main {
 
 }
 
+#about {
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    max-width: 500px;
+    background-color: white;
+    padding: 50px;
+    border: black double 20px;
+    color: black;
+    /* border-top: none; */
+
+    z-index: 2;
+}
+
+#about h1 {
+    font-size: 2em;
+    color: black;
+}
+
 ol[contenteditable="true"] {
     transition: padding 1.5s;
 }
