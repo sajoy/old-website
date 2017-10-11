@@ -33,15 +33,14 @@ html {
 
 body {
     height: 100%;
+    width: 100vw;
     margin: 0;
     background-color: var(--dark-color);
     color: var(--light-color);
     font-size: 16px;
     
     cursor: crosshair;
-    overflow: hidden;
     box-sizing: border-box;
-    border: solid 15px var(--lightest-color);
 }
 
 h1 {
@@ -58,8 +57,7 @@ main {
     line-height: 1.5rem;
 
     padding: 10%;
-    height: 100%;
-    overflow: scroll;
+    /* border: solid 15px var(--lightest-color); */
 
 }
 
@@ -168,4 +166,8 @@ a:hover {
     cursor: -webkit-grab;
 
     position: absolute;
+}
+
+.magnet::selection {
+    background-color: rgba(255,255,255,0);
 }

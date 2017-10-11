@@ -11,11 +11,19 @@
         <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
-        <main>
+        
+        <div id="instructions"></div>
+        <main></main>
 
-
-        </main>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta/draggable.js'></script>
+        <script src='js/helpers.js'></script>
         <script src='js/magnets.js'></script>
+        <script src='js/cloud.js'></script>
+        <script>
+            const keys = Object.keys( options );
+            const randomKey = keys[Math.floor( Math.random() * keys.length )];
+            
+            options[randomKey]();
+        </script>
     </body>
 </html>

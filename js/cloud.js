@@ -1,4 +1,4 @@
-
+//@ts-check
 (function (app) {
 
     app.cloud = function () {
