@@ -14,7 +14,6 @@ const quote = [
     `or`,  `undo`,  `)`,  `till`,  `you`,  `drop`,  `.`,  `-`,  `e`,  `.`,  `e`,  `.`,  `cummings` 
 ];
 
-console.log( 'l', quote.length);
 const magnetEles = quote.map( content => {
     let magnet = document.createElement( 'p' );
     magnet.classList.add( 'magnet' ); 
@@ -27,16 +26,18 @@ while ( magnetEles.length > 0 ) {
     groups.push( magnetEles.splice(0,16) );
 }
 
-groups.forEach( (group, i) => { // iterates over 12 groups
-    let top = (i * 60) + 30;
+groups.forEach( (group, i) => {
+    let top = (i * 60) + 100 + varySpacing(5);
 
     group.forEach( (magnet, j, eles) => {
         console.log( `inside group ${i}`, magnet );
         let prevLeft, prevWidth;
+
+        top = top + varySpacing(5);
         
         console.log( 'j is', j );
         if ( j === 0 ) {
-            prevLeft = 200;
+            prevLeft = 200 + varySpacing(100);
             prevWidth = 0;
         } else {
             let prev = eles[j - 1];
@@ -52,12 +53,9 @@ groups.forEach( (group, i) => { // iterates over 12 groups
     });
 });
 
-/*
-    strings of words
-    elements
-    arrays of 12 words
-*/
-
+function varySpacing ( range ) {
+    return Math.floor( Math.random() * range );
+}
 
 new Dragg( document.querySelectorAll( 'main' ), { draggable: '.magnet' } )
     .on( 'drag:start', () => console.log( 'start' ) )
@@ -69,8 +67,6 @@ new Dragg( document.querySelectorAll( 'main' ), { draggable: '.magnet' } )
 
 /*
 
-- position magnets properly
-  - so on move they don't collapse into each other
 - turn off highlighting
 - make dude disappear
 - not grow big
