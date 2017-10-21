@@ -21,6 +21,7 @@ https://coolors.co/ff91bb-a68dc4-7fffdf-f4fff9-ffffff
 html {
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 :root {
@@ -33,7 +34,7 @@ html {
 
 body {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -55,29 +56,30 @@ h1 {
 
 main {
     line-height: 1.5rem;
-
     padding: 10%;
     /* border: solid 15px var(--lightest-color); */
-
+    min-height: 50vh;
 }
 
 #about {
-    position: fixed;
-    top: 50px;
-    left: 100px;
-    max-width: 500px;
     background-color: white;
-    padding: 50px;
+    margin: 100px;
+    padding: 20px 50px;
     border: black double 20px;
     color: black;
-    /* border-top: none; */
-
+    box-sizing: border-box;
     z-index: 2;
+    width: 50%;
+    min-width: 400px;
 }
 
 #about h1 {
     font-size: 2em;
     color: black;
+}
+
+#about p {
+    display: block;
 }
 
 ol[contenteditable="true"] {

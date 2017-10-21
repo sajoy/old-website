@@ -1,4 +1,5 @@
 //@ts-check
+
 (function (app) {
 
     app.cloud = function () {
@@ -10,26 +11,22 @@
         document.body.appendChild( cloudEle );
         document.body.addEventListener( 'keydown', move );
 
-        writeInstructions( 'Use your arrow or WASD keys to move.', ['<', '^', '>', 'v'] );
+        writeInstructions( 'Use your WASD keys to move.', ['w', 'a', 's', 'd'] );
   
     };
     
     function move ( e ) {
         switch (event.code) {
             case "KeyA":
-            case "ArrowLeft":
                 moveCloud('left');
                 break;
             case "KeyD":
-            case "ArrowRight":
                 moveCloud('right');
                 break;
             case "KeyS":
-            case "ArrowDown":
                 moveCloud('down');
                 break;
             case "KeyW":
-            case "ArrowUp":
                 moveCloud('up');
                 break;
         }
