@@ -12,7 +12,7 @@
     </head>
     <body>
         <div id="instructions"></div>
-        <main></main>
+        <main id="dropzone"><section id="WTF" style="height: 300px; width: 300px; border: solid white 1px;"></section></main>
         <section id="about">
             <h1>SJ (aka Sarah Joy)</h1>
             <p>Hi! I'm a creative writing major turned web developer.</p>
@@ -31,7 +31,8 @@
             const keys = Object.keys( options );
             const randomKey = keys[Math.floor( Math.random() * keys.length )];
 
-            options[randomKey]();
+            options.magnets();
+            // options[randomKey]();
         </script>
     </body>
 </html>

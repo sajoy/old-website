@@ -19,7 +19,6 @@
     ];
     
     function initMagnets () {
-        const Dragg = Draggable.Draggable;
         const magnetEles = quote.map( content => {
             let magnet = document.createElement( 'p' );
             magnet.classList.add( 'magnet' ); 
@@ -36,12 +35,10 @@
             let top = (i * 60) + 100 + varySpacing(5);
             
             group.forEach( (magnet, j, eles) => {
-                console.log( `inside group ${i}`, magnet );
                 let prevLeft, prevWidth;
                 
                 top = top + varySpacing(5);
                 
-                console.log( 'j is', j );
                 if ( j === 0 ) {
                     prevLeft = 200 + varySpacing(100);
                     prevWidth = 0;
@@ -59,17 +56,21 @@
             });
         });
 
-        new Dragg( document.querySelectorAll( 'main' ), { draggable: '.magnet' } )
-            .on( 'drag:start', () => console.log( 'start' ) )
-            .on('drag:move',  (e) => {
-                console.log( e.source.style.display = 'none' );
-                console.log( e.source.getBoundingClientRect() );
-            })
-            .on('drag:stop', (e) => {
-                console.log( e.source.style.display = 'block' );
-                console.log( 'source left', e.source.style.left )
+        new Draggable.Droppable( document.querySelectorAll( 'main' ), { draggable: '.magnet', droppable: '.magnet' } )
+            .on( 'drag:start', (e) => { 
+                console.log( 'start' ) 
                 console.log( 'source bounding client', e.source.getBoundingClientRect().left )
-                console.log( 'ou est la mouse' )
+            })
+            .on('drag:move',  (e) => {
+                e.source.style.display = 'none';
+                console.log( 'ele bouding client', e.source.getBoundingClientRect() );
+            })
+            .on('droppable:over', (e) => console.log( 'over something' ) )
+            .on('drag:stop', (e) => {
+                e.source.style.display = 'block';
+                console.log( 'source left', e.source.style.transform )
+                console.log( 'source bounding client', e.source.getBoundingClientRect().left )
+                console.log( 'ou est la mouse', e )
             });
     }
 
