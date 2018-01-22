@@ -1,148 +1,71 @@
-/*
-
-https://coolors.co/86e7b8-93ff96-b2ffa8-d0ffb7-f2f5de
-
-https://coolors.co/fae8eb-f6caca-e4c2c6-ff4f79-ffb49a 
-
-https://coolors.co/67597a-544e61-6e8894-85baa1-ceeddb
-
-https://coolors.co/b4edd2-a0cfd3-8d94ba-9a7aa0-87677b
-
-https://coolors.co/a7bed3-c6e2e9-f1ffc4-ffcaaf-dab894
-
-https://coolors.co/4effef-73a6ad-9b97b2-d8a7ca-c7b8ea
-
-https://coolors.co/ff91bb-a68dc4-7fffdf-f4fff9-ffffff
-
-
-*/
-
 :root {
-    --dark-color: #A68DC4;
-    --lightest-color: #ffffff;
-    --light-color: #F4FFF9;
-    --medium-color: #FF91BB;
-    --highlight-color: #7FFFDF;
+    black-color: rgb(37, 37, 37);
 }
 
 body {
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    font-size: 16px;
+    font-family: monospace;
+    font-size: 1.25rem;
+    color: rgb(37, 37, 37);
 
-    cursor: crosshair;
-    overflow: hidden;
+
+    /* animated gradient from https://www.gradient-animator.com/ */
+
+    background: linear-gradient(270deg, #dcbbff, #ffbbec, #bbe8ff);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 39s ease infinite;
+    -moz-animation: AnimationName 39s ease infinite;
+    animation: AnimationName 39s ease infinite;
 }
 
 h1 {
-    color: var(--light-color);
-    opacity: .9;
-    font-family: monospace;
-    font-size: 4rem;
-    letter-spacing: 10px;
-    font-weight: normal;
-    width: fit-content;
+    font-family: 'Abril Fatface';
+    letter-spacing: .3rem;
 }
 
 main {
-    position: fixed;
-    top: 100px;
-    left: 200px;
-
-    line-height: 1.5rem;
+    margin: 10% auto;
+    width: fit-content;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-ol[contenteditable="true"] {
-    transition: padding 1.5s;
+p {
+    max-width: 500px;
 }
 
-ol[contenteditable="true"]:focus {
-    padding: 30px;
-    outline: none;
-    background-color: rgba( 255, 255, 255, .2);
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: var(--highlight-color);
+    color: var(--black-color);
 }
 
-a:hover {
-    font-style: italic;
-}
-
-.article-link, article span, p {
-    display: inline-block;
-}
-
-#instructions {
-    margin: 10px;
-    opacity: .5;
-    transition: opacity 1s;
-}
-
-#instructions:hover {
-    opacity: 1;
-}
-
-#instructions pre {
-    background: rgba( 255, 255, 255, .3 );
-    width: 20px;
-    margin: 0 2px;
-    display: inline-block;
-    text-align: center;
-}
-
-/*           todo  */
-.done {
-    text-decoration: line-through;
-    opacity: .5;
-}
-
-/*           clouds  */
-#cloud {
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    opacity: .8;
-    filter: invert(100);
-    animation: rain 8s ease-in-out;
-    top: 100px;
-    left: 1000px;
-}
-
-@keyframes rain {
-    from {
-        top: 200px;
-        left: 10px;
-    }
-    to {
-        top: 100px;
-        left: 1000px;
-    }
+#updates {
+    text-align: left;
+    margin-top: 15%;
 }
 
 
+/* animated gradient from https://www.gradient-animator.com/ */
 
-/*           updates */
-
-#updates dl {
-    margin: 100px auto;
-    width: 80%;
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
 }
-
-#updates dt {
-    margin-top: 15px;
-    color: var(--lightest-color);
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
 }
-
-#updates dd {
-    -webkit-margin-start: unset;
-}
-
-#updates sup {
-    border-bottom: solid var(--light-color) 2px;
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
 }

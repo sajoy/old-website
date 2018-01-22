@@ -12,26 +12,52 @@
     </head>
     <body>
         <main>
-            <ol contenteditable="true">
-                <li>I'm Sarah Joy.</li>
-                <li>I'm working on some stuff:
-                    <ul>
-                        <li><a href="#">
-                            random stuff
-                        </a></li>
-                        <li><a href="#">
-                            new portfolio site stuff
-                        </a></li>
-                        <li><a href="#">
-                            write-y stuff
-                        </a></li>
-                    </ul>
-                </li>
-                <li>Eventually those will be links and this will not be confusing.</li>
-            </ol>
+            <h1>SJ : Sarah Joy</h1>
+            <canvas height="200" width="500"></canvas>
+            <p>
+                I (just want to) make things. Currently teaching other people how to make (internet) things at Alchemy Code Lab. 
+                I ❤ hot keys, ice cream, cats, and learning/thinking about how and why things work/exist.
+            </p>
+            <p>---</p>
+            <ul>
+                <lh>:: code ::</lh>
+                <li><a href="https://www.dwitter.net/u/sj_">dwitter</a> :: JS/canvas sketches</li>
+                <li><a href="https://github.com/sajoy/">github</a> :: projects</li>
+                <li><a href="https://sj.neocities.org/">neocities</a> :: quote sketches</li>
+            </ul>
+            <ul>
+                <lh>:: writing ::</lh>
+                <li><a href="https://medium.com/@sarahjoy">medium</a> :: creative writing</li>
+                <li><a href="/updates">updates</a> :: personal thoughts</li>
+            </ul>
+            <ul>
+                <lh>:: connect ::</lh>
+                <li><a href="https://twitter.com/superissarah">twitter</a> :: send me gifs</li>
+                <li><a href="mailto:sajoy.pc@gmail.com">email</a> :: say hello (and send gifs)</li>
+            </ul>
         </main>
-            
-        <script src='js/helpers.js'></script>
-        <script src='js/colors.js'></script>
     </body>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        const cHeight = canvas.height;
+
+        let time = 0;
+        function draw() {
+            ctx.clearRect(0,0, 500, 200);
+            for(var i=0;i<100;i++) {
+                ctx.fillStyle=`rgba(${i*4},${i*4},${i*4},${rand(0,9)/10})`;
+                const num = rand(5,i);
+                ctx.fillRect(rand(0,500), rand(i*1.25,100), num, num);
+            }
+            time++;
+        }
+
+        setInterval(draw, 150);
+
+        function rand(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+    </script>
 </html>
