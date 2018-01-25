@@ -26,7 +26,7 @@ h1 {
 main {
     margin: 10% auto;
     width: fit-content;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,16 @@ main {
 
 p {
     max-width: 500px;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+p.dash {
+    text-align: center;
+}
+
+span.awful {
+    text-decoration: underline wavy;
 }
 
 ul {
@@ -44,6 +54,10 @@ ul {
 
 a {
     color: var(--black-color);
+}
+
+a:hover {
+    text-decoration: underline wavy;
 }
 
 #updates {
