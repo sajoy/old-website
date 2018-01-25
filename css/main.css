@@ -38,6 +38,7 @@ p {
     max-width: 500px;
     line-height: 1.5rem;
     text-align: justify;
+    padding: 0 20px;
 }
 
 p.dash {
@@ -64,6 +65,7 @@ a:hover {
 canvas {
     width: 500px;
     height: 500px;
+    cursor: pointer;
 }
 
 #updates {
