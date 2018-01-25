@@ -10,13 +10,20 @@ const x = canvas.getContext('2d'),
       
 
 const drawings = [galaxy,squares];
-const draw = drawings[rand(0,drawings.length-1)];
-setInterval(draw, 50);
+canvas.addEventListener('click', draw);
+draw();
+
+var current;
+function draw () {
+    if (current) clearInterval(current);
+    x.clearRect(0,0, canvas.height, canvas.width);
+    const randomDrawing = drawings[rand(0,drawings.length-1)];
+    current = setInterval(randomDrawing, 50);
+}
 
 function rand(min,max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 
 /* 
