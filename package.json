@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently -k \"npm run sass\" \"lite-server\"",
-    "sass": "node-sass -w --include-path sass scss/ -o css/"
+    "start": "concurrently -k \"npm run sass\" \"npm run compile:html\" \"lite-server\"",
+    "sass": "node-sass -w --include-path sass scss/ -o css/",
+    "compile:html": "html-includes --src src --dest . --watch"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/sajoy/sajoy.github.io#readme",
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "html-includes": "^2.1.0",
     "lite-server": "^2.3.0",
     "node-sass": "^4.8.3"
   }
