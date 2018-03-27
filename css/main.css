@@ -1,0 +1,85 @@
+:root {
+  black-color: #252525; }
+
+body {
+  font-family: monospace;
+  font-size: 1.25rem;
+  color: #252525;
+  /* animated gradient from https://www.gradient-animator.com/ */
+  background: linear-gradient(270deg, #dcbbff, #ffbbec, #bbe8ff);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 39s ease infinite;
+  -moz-animation: AnimationName 39s ease infinite;
+  animation: AnimationName 39s ease infinite; }
+  body h1 {
+    color: gray; }
+
+h1 {
+  font-family: 'Abril Fatface';
+  letter-spacing: .3rem; }
+
+main {
+  margin: 10% auto;
+  width: fit-content;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+p {
+  max-width: 500px;
+  line-height: 1.5rem;
+  text-align: justify;
+  padding: 0 20px; }
+
+p.dash {
+  text-align: center; }
+
+span.awful {
+  text-decoration: underline wavy; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  color: var(--black-color); }
+
+a:hover {
+  text-decoration: underline wavy; }
+
+canvas {
+  width: 500px;
+  height: 500px;
+  cursor: pointer; }
+
+#updates {
+  text-align: left;
+  margin-top: 15%; }
+
+/* animated gradient from https://www.gradient-animator.com/ */
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 51%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 51%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 51%; }
+  100% {
+    background-position: 0% 50%; } }
