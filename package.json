@@ -1,0 +1,25 @@
+{
+  "name": "sajoy.github.io",
+  "version": "1.0.0",
+  "description": "personal website for sarah joy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "sass": "node-sass --include-path sass css/ -o docs/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajoy/sajoy.github.io.git"
+  },
+  "author": "sajoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajoy/sajoy.github.io/issues"
+  },
+  "homepage": "https://github.com/sajoy/sajoy.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "node-sass": "^4.8.3"
+  }
+}
