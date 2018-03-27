@@ -7,9 +7,8 @@ body {
 
 ul {
   list-style-type: square; }
-
-ul li {
-  line-height: 1.3; }
+  ul li {
+    line-height: 1.3; }
 
 .bold {
   font-weight: bold; }
@@ -19,56 +18,43 @@ ul li {
 
 header h1 {
   font-size: 4em;
-  margin-bottom: 0; }
+  margin-bottom: 10px; }
 
 header ul {
   padding: 0;
   list-style-type: none;
   margin-top: 0; }
-
-header ul lh {
-  color: initial; }
-
-header ul li {
-  display: inline-block;
-  padding-left: 2px; }
-
-header ul li a {
-  color: black;
-  text-decoration: none; }
-
-header ul li a:hover {
-  text-decoration: underline; }
+  header ul lh {
+    color: initial; }
+  header ul li {
+    display: inline-block;
+    padding-left: 2px; }
 
 main {
-  width: 750px; }
-
-main h3 {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  margin-top: 30px; }
-
-main ul.cols {
-  padding-left: 25px;
-  width: 30%;
-  min-width: 325px; }
-
-main ul.cols.two {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2; }
-
-main ul.cols.three {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3; }
-
-main ul.cols li {
-  margin-left: 1em; }
-
-main #experience h4 {
-  margin-bottom: 5px; }
-
-main #experience .details {
-  margin-top: 0; }
+  width: 750px;
+  text-align: left; }
+  main h3 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 30px; }
+  main ul, main li {
+    padding: initial; }
+  main ul.cols {
+    padding-left: 25px;
+    width: 30%;
+    min-width: 325px; }
+    main ul.cols li {
+      margin-left: 1em; }
+    main ul.cols.two {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2; }
+    main ul.cols.three {
+      columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3; }
+  main #experience h4 {
+    margin-bottom: 5px; }
+  main #experience .details {
+    margin-top: 0; }
