@@ -43,6 +43,11 @@ header  {
         }
     }
     
+    p {
+        padding: 0;
+        max-width: initial;
+    }
+    
 }
 
   
@@ -57,13 +62,19 @@ main {
         margin-top: 30px;
     }
 
-    ul, li {
-        padding: initial;
+    ul {
+        margin-left: 1rem;
+        padding: 0 1rem;
+        
+        li {
+            padding: 0 1rem;
+        }
     }
+    
 
     ul.cols {
         padding-left: 25px;
-        width: 30%;
+        // width: 30%;
         min-width: 325px;
 
         li {
@@ -87,5 +98,9 @@ main {
         h4 { margin-bottom: 5px; }
 
         .details { margin-top: 0; }
+    }
+
+    section {
+        width: 750px;
     }
 }

@@ -30,6 +30,10 @@ header ul {
     display: inline-block;
     padding-left: 2px; }
 
+header p {
+  padding: 0;
+  max-width: initial; }
+
 main {
   width: 750px;
   text-align: left; }
@@ -38,11 +42,13 @@ main {
     text-transform: uppercase;
     margin-bottom: 0;
     margin-top: 30px; }
-  main ul, main li {
-    padding: initial; }
+  main ul {
+    margin-left: 1rem;
+    padding: 0 1rem; }
+    main ul li {
+      padding: 0 1rem; }
   main ul.cols {
     padding-left: 25px;
-    width: 30%;
     min-width: 325px; }
     main ul.cols li {
       margin-left: 1em; }
@@ -58,3 +64,5 @@ main {
     margin-bottom: 5px; }
   main #experience .details {
     margin-top: 0; }
+  main section {
+    width: 750px; }
