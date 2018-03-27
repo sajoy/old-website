@@ -11,8 +11,6 @@ body {
   -webkit-animation: AnimationName 39s ease infinite;
   -moz-animation: AnimationName 39s ease infinite;
   animation: AnimationName 39s ease infinite; }
-  body h1 {
-    color: gray; }
 
 h1 {
   font-family: 'Abril Fatface';

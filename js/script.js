@@ -9,7 +9,7 @@ const x = canvas.getContext('2d'),
       T = Math.tan;
       
 
-const drawings = [galaxy,squares];
+const drawings = [galaxy,squares, pattern];
 canvas.addEventListener('click', draw);
 draw();
 
@@ -18,6 +18,7 @@ function draw () {
     if (current) clearInterval(current);
     x.clearRect(0,0, canvas.height, canvas.width);
     const randomDrawing = drawings[rand(0,drawings.length-1)];
+    // current = setInterval(pattern, 50);
     current = setInterval(randomDrawing, 50);
 }
 
@@ -48,6 +49,18 @@ function squares () {
         x.fillStyle=`rgba(${i*4},${i*4},${i*4},${rand(0,9)/10})`;
         const num = rand(5,i);
         x.fillRect(rand(0,500), rand(i*5,500), num, num);
+    }
+    t++;
+}
+
+function pattern () {
+    x.fillStyle='black';
+    let i = Math.min(t, rand(0, 500));
+    for (var j = 0; j < 50; j++) {
+        if (j === rand(0,20)) x.fillStyle='#dcbbff';
+        x.fillRect(i * 10, j * 10, 5, 5);
+        x.fillRect(j * 20, i * 20, 10, 10);
+        x.fillRect(j * 10, i * 5, 2, 2);
     }
     t++;
 }
