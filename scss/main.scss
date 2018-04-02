@@ -1,6 +1,7 @@
 :root {
     --black-color: rgb(37, 37, 37);
     --pale-yellow: rgba(255, 255, 170, 0.8);
+    --text-color:  rgb(37, 37, 37);
 }
 
 $pink: #ffbbec;
@@ -10,7 +11,7 @@ $blue: #bbe8ff;
 body {
     font-family: monospace;
     font-size: 1.25rem;
-    color: rgb(37, 37, 37);
+    color: var(--text-color);
 
 
     /* animated gradient from https://www.gradient-animator.com/ */
@@ -27,16 +28,10 @@ body {
     }
 
     &.new-color {       
-        color: white;
         background: linear-gradient(270deg, cyan, magenta, yellow);
         background-size: 500% 500%;
 
-        transition: background 2s;
-
-        a {
-            color: white;
-        }
-        
+        transition: background 2s;        
 
         -webkit-animation: AnimationName 20s ease infinite;
         -moz-animation: AnimationName 20s ease infinite;
@@ -79,6 +74,20 @@ main:not(#resume) {
         font-weight: normal;
         cursor: default;
     }
+
+}
+
+img {
+    position: absolute;
+    opacity: 0;
+    bottom: -450px;
+    left: -1000px;
+    transition: left 2s;
+    
+    &.yawn {
+        opacity: 1;
+        left: -400px;
+    }
 }
 
 
@@ -90,12 +99,13 @@ label {
     font: inherit;
     padding: 0 5px;
     display: inline-block;
+    border: solid var(--text-color) 2px;
+    width: 140px;
+    margin: 5px;
+    box-shadow: var(--text-color) 3px 5px 0 0;
 
-    &:hover {
-        &::before, &::after,
-        &:active, &:focus {
-            content: ' ~ ';
-        }
+    &:hover, &:active, &:focus {
+        box-shadow: var(--text-color) 1px 2px 0 0;
     }
 }
 
@@ -104,9 +114,11 @@ input[type="checkbox"] {
     display: none;
     
     &:checked + label {
-        &::after {
-            content: ' ~ ';
-        } 
+    //    box-shadow:  var(--text-color) 0 0 0 0;
+
+    //    &:hover, &:active, &:focus {
+    //     box-shadow: var(--text-color) 3px 5px 0 0;
+    //    }
     }
 }
 
@@ -133,7 +145,7 @@ ul {
 }
 
 a {
-    color: var(--black-color);
+    color: var(--text-color);
 }
 
 a:hover {

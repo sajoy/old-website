@@ -74,13 +74,19 @@ const morphing = anime({
                 break;
             case 'change-color':
                 document.body.classList.toggle('new-color');
+                
+                const root = document.documentElement;
+                const color = getComputedStyle(root).getPropertyValue("--text-color");
+                root.style.setProperty('--text-color', color !== 'white' ? 'white' : 'rgb(37, 37, 37)');
+                
                 const square = document.querySelector('svg .morph');
                 const stroke = square.getAttribute('stroke');
                 square.setAttribute('stroke', stroke === '#000' ? '#FFF' : '#000');
 
                 break;
-            case 'random':
-                console.log('dunno what this will do yet (: ');
+            case 'cats':
+                const midnight = document.querySelector('#logo img');
+                midnight.classList.toggle('yawn');
                 break;
         }
       });

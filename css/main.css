@@ -1,11 +1,12 @@
 :root {
   --black-color: rgb(37, 37, 37);
-  --pale-yellow: rgba(255, 255, 170, 0.8); }
+  --pale-yellow: rgba(255, 255, 170, 0.8);
+  --text-color:  rgb(37, 37, 37); }
 
 body {
   font-family: monospace;
   font-size: 1.25rem;
-  color: #252525;
+  color: var(--text-color);
   /* animated gradient from https://www.gradient-animator.com/ */
   background: linear-gradient(270deg, #dcbbff, #ffbbec, #bbe8ff);
   background-size: 800% 800%;
@@ -15,15 +16,12 @@ body {
   body *::selection {
     background-color: var(--pale-yellow); }
   body.new-color {
-    color: white;
     background: linear-gradient(270deg, cyan, magenta, yellow);
     background-size: 500% 500%;
     transition: background 2s;
     -webkit-animation: AnimationName 20s ease infinite;
     -moz-animation: AnimationName 20s ease infinite;
     animation: AnimationName 20s ease infinite; }
-    body.new-color a {
-      color: white; }
 
 h1 {
   font-family: 'Abril Fatface';
@@ -57,18 +55,30 @@ main:not(#resume) {
     font-weight: normal;
     cursor: default; }
 
+img {
+  position: absolute;
+  opacity: 0;
+  bottom: -450px;
+  left: -1000px;
+  transition: left 2s; }
+  img.yawn {
+    opacity: 1;
+    left: -400px; }
+
 label {
   border: none;
   font: inherit;
   padding: 0 5px;
-  display: inline-block; }
-  label:hover::before, label:hover::after, label:hover:active, label:hover:focus {
-    content: ' ~ '; }
+  display: inline-block;
+  border: solid var(--text-color) 2px;
+  width: 140px;
+  margin: 5px;
+  box-shadow: var(--text-color) 3px 5px 0 0; }
+  label:hover, label:active, label:focus {
+    box-shadow: var(--text-color) 1px 2px 0 0; }
 
 input[type="checkbox"] {
   display: none; }
-  input[type="checkbox"]:checked + label::after {
-    content: ' ~ '; }
 
 p {
   max-width: 500px;
@@ -88,7 +98,7 @@ ul {
   line-height: 1.5rem; }
 
 a {
-  color: var(--black-color); }
+  color: var(--text-color); }
 
 a:hover {
   text-decoration: underline wavy; }
