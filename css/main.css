@@ -1,5 +1,5 @@
 :root {
-  black-color: #252525; }
+  --black-color: rgb(37, 37, 37); }
 
 body {
   font-family: monospace;
@@ -11,20 +11,40 @@ body {
   -webkit-animation: AnimationName 39s ease infinite;
   -moz-animation: AnimationName 39s ease infinite;
   animation: AnimationName 39s ease infinite; }
+  body *::selection {
+    background-color: rgba(255, 255, 170, 0.8); }
 
 h1 {
   font-family: 'Abril Fatface';
   letter-spacing: .3rem; }
 
-main {
+main:not(#resume) {
   margin: 10% auto;
   width: fit-content;
   height: 100%;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: flex-start; }
+
+#logo {
+  --dimension: 120px;
+  border: 5px solid black;
+  margin: 75px 50px;
+  height: var(--dimension);
+  width: var(--dimension);
+  position: relative; }
+  #logo h1 {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    position: absolute;
+    margin: 0 5px;
+    bottom: 0;
+    right: 0;
+    font-size: 3rem;
+    font-weight: normal;
+    cursor: default; }
 
 p {
   max-width: 500px;
@@ -40,7 +60,8 @@ span.awful {
 
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  line-height: 1.5rem; }
 
 a {
   color: var(--black-color); }
