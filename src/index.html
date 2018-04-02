@@ -3,13 +3,24 @@
     <head include src="_head.html"></head>
     <body>
         <main>
-            <div id="logo"><h1>SJ</h1></div>
+            <div id="logo">
+                <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="morph" stroke-width="4.5" stroke="#000" 
+                             fill="#fff" fill-opacity="0" 
+                             points="60 60, 130 60, 190 60, 190 130,
+                            190 190, 130 190, 60 190, 60 130">
+                    </polygon>
+                  </g>
+                </svg>
+                <h1>SJ</h1>
+              </div>  
             <section>
                 <article>
 
                     <h2>about me</h2>
                     <p>
-                        Hi, I'm Sarah Joy (also known as SJ). I make things with JavaScript.
+                        Hi, I'm Sarah Joy. I make things with JavaScript.
                     </p>
                     <p>
                         Currently: I co-lead JavaScript Study Nights for <a href="https://www.meetup.com/Women-Who-Code-Portland/">Women Who Code Portland</a> &&
@@ -17,6 +28,24 @@
                         encourages creativity and growth in their employees and their end users.
                     </p>
                     <p>Previously: Instructor at Alchemy Code Lab, Web App Developer at Cardsmith. </p>
+                </article>
+                <p class="dash">---</p>
+                <article>                    
+                    <h2>I like playing with</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="change-color" value="normal">
+                            <label for="change-color">[ color ]</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="morph-logo" value="normal">
+                            <label for="morph-logo">__ shape</label>
+                        <li>
+                        <li>
+                            <input type="checkbox" id="random" value="normal">
+                            <label for="random">randomness |||</label>
+                        </li>
+                    </ul>
                 </article>
                 <p class="dash">---</p>
                 <article>                    
@@ -62,6 +91,9 @@
                 </article>
             </section>
         </main>
+        <script src="/js/anime.js">
+        </script>
+        <script src="/js/script.js">
+        </script>
     </body>
-    </script>
 </html>

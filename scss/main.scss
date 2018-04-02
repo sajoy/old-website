@@ -1,6 +1,11 @@
 :root {
     --black-color: rgb(37, 37, 37);
+    --pale-yellow: rgba(255, 255, 170, 0.8);
 }
+
+$pink: #ffbbec;
+$purple: #dcbbff;
+$blue: #bbe8ff;
 
 body {
     font-family: monospace;
@@ -10,7 +15,7 @@ body {
 
     /* animated gradient from https://www.gradient-animator.com/ */
 
-    background: linear-gradient(270deg, #dcbbff, #ffbbec, #bbe8ff);
+    background: linear-gradient(270deg, $purple, $pink, $blue);
     background-size: 800% 800%;
 
     -webkit-animation: AnimationName 39s ease infinite;
@@ -18,7 +23,24 @@ body {
     animation: AnimationName 39s ease infinite;
 
     *::selection {
-        background-color: rgba(255, 255, 170, 0.8);
+        background-color: var(--pale-yellow);
+    }
+
+    &.new-color {       
+        color: white;
+        background: linear-gradient(270deg, cyan, magenta, yellow);
+        background-size: 500% 500%;
+
+        transition: background 2s;
+
+        a {
+            color: white;
+        }
+        
+
+        -webkit-animation: AnimationName 20s ease infinite;
+        -moz-animation: AnimationName 20s ease infinite;
+        animation: AnimationName 20s ease infinite;
     }
 }
 
@@ -39,25 +61,55 @@ main:not(#resume) {
 }
 
 #logo {
-    --dimension: 120px;
-    border: 5px solid black;
+    --dimension: 200px;
     margin: 75px 50px;
     height: var(--dimension);
     width: var(--dimension);
-    position: relative;
+    position: sticky;
+    top: 50px;
 
     h1 {
         font-family: sans-serif;
         letter-spacing: 1px;
         position: absolute;
         margin: 0 5px;  
-        bottom: 0;
-        right: 0;
-        font-size: 3rem;
+        bottom: 10px;
+        right: 10px;
+        font-size: 2.5rem;
         font-weight: normal;
         cursor: default;
     }
 }
+
+
+$randomNum: random(8) + px;
+$negRandomNum: random(16) - 8 + px;
+
+label {
+    border: none;
+    font: inherit;
+    padding: 0 5px;
+    display: inline-block;
+
+    &:hover {
+        &::before, &::after,
+        &:active, &:focus {
+            content: ' ~ ';
+        }
+    }
+}
+
+
+input[type="checkbox"] {
+    display: none;
+    
+    &:checked + label {
+        &::after {
+            content: ' ~ ';
+        } 
+    }
+}
+
 
 p {
     max-width: 500px;

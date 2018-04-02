@@ -1,5 +1,6 @@
 :root {
-  --black-color: rgb(37, 37, 37); }
+  --black-color: rgb(37, 37, 37);
+  --pale-yellow: rgba(255, 255, 170, 0.8); }
 
 body {
   font-family: monospace;
@@ -12,7 +13,17 @@ body {
   -moz-animation: AnimationName 39s ease infinite;
   animation: AnimationName 39s ease infinite; }
   body *::selection {
-    background-color: rgba(255, 255, 170, 0.8); }
+    background-color: var(--pale-yellow); }
+  body.new-color {
+    color: white;
+    background: linear-gradient(270deg, cyan, magenta, yellow);
+    background-size: 500% 500%;
+    transition: background 2s;
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite; }
+    body.new-color a {
+      color: white; }
 
 h1 {
   font-family: 'Abril Fatface';
@@ -29,22 +40,35 @@ main:not(#resume) {
   align-items: flex-start; }
 
 #logo {
-  --dimension: 120px;
-  border: 5px solid black;
+  --dimension: 200px;
   margin: 75px 50px;
   height: var(--dimension);
   width: var(--dimension);
-  position: relative; }
+  position: sticky;
+  top: 50px; }
   #logo h1 {
     font-family: sans-serif;
     letter-spacing: 1px;
     position: absolute;
     margin: 0 5px;
-    bottom: 0;
-    right: 0;
-    font-size: 3rem;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2.5rem;
     font-weight: normal;
     cursor: default; }
+
+label {
+  border: none;
+  font: inherit;
+  padding: 0 5px;
+  display: inline-block; }
+  label:hover::before, label:hover::after, label:hover:active, label:hover:focus {
+    content: ' ~ '; }
+
+input[type="checkbox"] {
+  display: none; }
+  input[type="checkbox"]:checked + label::after {
+    content: ' ~ '; }
 
 p {
   max-width: 500px;

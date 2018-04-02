@@ -1,66 +1,87 @@
-const canvas = document.querySelector('canvas');
-const cHeight = canvas.height;
+// using anime.js
+// from docs: http://animejs.com/documentation/#morphing
 
-// shorthands to match dwitter.net
-let t = 0;
-const x = canvas.getContext('2d'), 
-      S = Math.sin, 
-      C = Math.cos, 
-      T = Math.tan;
+const morphing = anime({
+    targets: '.morph',
+    points: [
       
+      { value: `60 60, 130 60, 190 60, 190 130, 
+                190 190, 130 190, 60 190, 60 130` }, 
+      { value: `60 60, 130 60, 190 60, 190 130,
+                190 190, 130 190, 60 190, 60 130` }, // starting square
+   
+      { value: `130 60, 130 60, 130 60, 190 190,
+               190 190, 130 190, 60 190, 60 190` },
+      { value: `130 60, 130 60, 130 60, 190 190,
+               190 190, 130 190, 60 190, 60 190` }, // up triangle
+      
+      { value: `190 120, 190 120, 190 120, 60 190,
+               60 190, 60 190, 60 60, 60 60` },
+      { value: `190 120, 190 120, 190 120, 60 190,
+               60 190, 60 190, 60 60, 60 60` }, // right triangle
+      
+      { value: `120 190, 120 190, 110 190, 60 190,
+                60 190, 60 60, 120 60, 120 60` },
+      { value: `120 190, 120 190, 110 190, 60 190,
+                60 190, 60 60, 120 60, 120 60` }, // narrow rect
+      
+      { value: `190 190, 190 190, 110 190, 60 190,
+                60 120, 60 60, 120 60, 190 60` },
+      { value: `190 190, 190 190, 110 190, 60 190,
+                60 120, 60 60, 120 60, 190 60` }, // expanding rect to sq
+      
+      { value: `160 190, 90 190, 110 190, 60 190,
+                60 120, 60 60, 120 60, 190 60` },
+      { value: `160 190, 90 190, 110 190, 60 190,
+                60 120, 60 60, 120 60, 190 60` }, // octo step 1
+      
+      { value: `160 190, 90 190, 60 160, 60 100,
+                60 100, 60 60, 120 60, 190 60` }, // octo step 2
+      
+      { value: `160 190, 90 190, 60 160, 60 90,
+                90 60, 100 60, 120 60, 190 60` }, // octo step 3
+      
+      { value: `160 190, 90 190, 60 160, 60 90,
+                90 60, 160 60, 190 90, 190 90` }, // octo step 4
+      
+      { value: `160 190, 90 190, 60 160, 60 90,
+                90 60, 160 60, 190 90, 190 160` },    
+      { value: `160 190, 90 190, 60 160, 60 90,
+                90 60, 160 60, 190 90, 190 160` },
+      { value: `160 190, 90 190, 60 160, 60 90,
+                90 60, 160 60, 190 90, 190 160` }, // octo step 5 - complete
+      
+      { value: `60 60, 130 60, 190 60, 190 130,
+                190 190, 130 190, 60 190, 60 130` } // ending square
+    ],
+    easing: 'linear',
+    duration: 8000,
+    loop: true,
+    autoplay: false
+  });
 
-const drawings = [galaxy,squares, pattern];
-canvas.addEventListener('click', draw);
-draw();
+  const options = document.querySelectorAll('input[type="checkbox"]');
+  options.forEach( btn => {
+      btn.addEventListener('click', function () {
+        switch (this.id) {
+            case 'morph-logo':
+                if (morphing.paused) {
+                    morphing.play();
+                } else {
+                    morphing.reset();
+                    morphing.pause();
+                }
+                break;
+            case 'change-color':
+                document.body.classList.toggle('new-color');
+                const square = document.querySelector('svg .morph');
+                const stroke = square.getAttribute('stroke');
+                square.setAttribute('stroke', stroke === '#000' ? '#FFF' : '#000');
 
-var current;
-function draw () {
-    if (current) clearInterval(current);
-    x.clearRect(0,0, canvas.height, canvas.width);
-    const randomDrawing = drawings[rand(0,drawings.length-1)];
-    // current = setInterval(pattern, 50);
-    current = setInterval(randomDrawing, 50);
-}
-
-function rand(min,max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-
-/* 
-      drawings
-                 */
-
-function galaxy () {
-    for(j=1;j<6;j++){
-        r=t*10-j*10;
-        for(i=0;i<300;i++){
-            m=i*10;
-            x.fillStyle=`hsla(0,100%,0%,${.2*j})`;
-            x.fillRect(300+100*S(j)+T(r)*C(m),20+80*j-T(r)*S(m)*S(t),1,1);
+                break;
+            case 'random':
+                console.log('dunno what this will do yet (: ');
+                break;
         }
-    }
-    t+=.1;
-}
-
-function squares () {
-    x.clearRect(0,0, 500, 500);
-    for(var i=0;i<100;i++) {
-        x.fillStyle=`rgba(${i*4},${i*4},${i*4},${rand(0,9)/10})`;
-        const num = rand(5,i);
-        x.fillRect(rand(0,500), rand(i*5,500), num, num);
-    }
-    t++;
-}
-
-function pattern () {
-    x.fillStyle='black';
-    let i = Math.min(t, rand(0, 500));
-    for (var j = 0; j < 50; j++) {
-        if (j === rand(0,20)) x.fillStyle='#dcbbff';
-        x.fillRect(i * 10, j * 10, 5, 5);
-        x.fillRect(j * 20, i * 20, 10, 10);
-        x.fillRect(j * 10, i * 5, 2, 2);
-    }
-    t++;
-}
+      });
+  })
