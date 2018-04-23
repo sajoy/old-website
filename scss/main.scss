@@ -75,19 +75,20 @@ main:not(#resume) {
         cursor: default;
     }
 
-}
-
-img {
-    position: absolute;
-    opacity: 0;
-    bottom: -450px;
-    left: -1000px;
-    transition: left 2s;
-    
-    &.yawn {
-        opacity: 1;
-        left: -400px;
+ 
+    img {
+        position: absolute;
+        opacity: 0;
+        bottom: -450px;
+        left: -1000px;
+        transition: left 2s, opacity 2s;
+        
+        &.yawn {
+            opacity: 1;
+            left: -400px;
+        }
     }
+
 }
 
 
@@ -112,14 +113,6 @@ label {
 
 input[type="checkbox"] {
     display: none;
-    
-    &:checked + label {
-    //    box-shadow:  var(--text-color) 0 0 0 0;
-
-    //    &:hover, &:active, &:focus {
-    //     box-shadow: var(--text-color) 3px 5px 0 0;
-    //    }
-    }
 }
 
 
@@ -128,10 +121,9 @@ p {
     line-height: 1.5rem;
     text-align: justify;
     padding: 0 20px;
-}
-
-p.dash {
-    text-align: center;
+    &.dash {
+        text-align: center;
+    }
 }
 
 span.awful {
@@ -142,6 +134,10 @@ ul {
     list-style: none;
     padding: 0;
     line-height: 1.5rem;
+
+    &.random-decor {
+        
+    }
 }
 
 a {

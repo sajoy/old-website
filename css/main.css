@@ -54,16 +54,15 @@ main:not(#resume) {
     font-size: 2.5rem;
     font-weight: normal;
     cursor: default; }
-
-img {
-  position: absolute;
-  opacity: 0;
-  bottom: -450px;
-  left: -1000px;
-  transition: left 2s; }
-  img.yawn {
-    opacity: 1;
-    left: -400px; }
+  #logo img {
+    position: absolute;
+    opacity: 0;
+    bottom: -450px;
+    left: -1000px;
+    transition: left 2s, opacity 2s; }
+    #logo img.yawn {
+      opacity: 1;
+      left: -400px; }
 
 label {
   border: none;
@@ -85,9 +84,8 @@ p {
   line-height: 1.5rem;
   text-align: justify;
   padding: 0 20px; }
-
-p.dash {
-  text-align: center; }
+  p.dash {
+    text-align: center; }
 
 span.awful {
   text-decoration: underline wavy; }

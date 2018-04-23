@@ -6,6 +6,8 @@
     1. operations
     1. console.lol
     1. scratch tab
+    1. cardsmith
+    1. french fry new tab count
 
 #### resume
 1. add pdf version

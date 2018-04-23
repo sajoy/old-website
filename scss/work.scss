@@ -1,0 +1,15 @@
+#work {
+
+    article {
+        ul.stack li {
+            display: inline-block;
+
+            &:not(:last-child):after {
+                content: ','
+            }
+        }
+        img {
+            height: 300px;
+        }
+    }
+}
