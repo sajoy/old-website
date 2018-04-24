@@ -1,3 +1,3 @@
-import {decorate} from './randomDecor';
+import {decorateLists} from './randomDecor';
 
-decorate();
+decorateLists();

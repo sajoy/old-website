@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently -k \"npm run sass\" \"npm run compile:html\" \"lite-server\"",
+    "start": "concurrently -k \"npm run sass\" \"npm run compile:html\" \"lite-server\" \"npm run build\"",
     "sass": "node-sass -w --include-path sass src/scss/ -o css/",
     "compile:html": "html-includes --src src --dest . --watch",
     "build": "webpack"

@@ -2,7 +2,7 @@ Array.prototype.getRandom = function () {
     return this[Math.floor(Math.random() * this.length)];
 };
 
-export function decorate () {
+export function decorateLists () {
     const toDecorate = document.querySelectorAll('.random-decor li');
     const classes = [
         {used: 0, class: 'left-stars'},
@@ -19,10 +19,10 @@ export function decorate () {
     let uses = 0; 
 
     toDecorate.forEach((li, i) => {
-        const randomClass = classes.filter(item => item.used <= uses).getRandom();
+        const randomClass = classes.filter(item => item.used === uses).getRandom();
         randomClass.used++;
-        li.classList.add(randomClass.class);
+        li.setAttribute('class', randomClass.class);
 
-        if (i % classes.length === 3) uses++;
+        if (i % classes.length === classes.length - 1) uses++;
     });
 }
