@@ -1,0 +1,20 @@
+#work section {
+  width: 500px; }
+
+#work article.project h2 {
+  margin: 0;
+  padding: 0; }
+
+#work article.project p[data-content="year"] {
+  text-align: center;
+  margin: 0; }
+
+#work article.project ul.stack li {
+  display: inline-block;
+  margin-left: 5px; }
+  #work article.project ul.stack li:not(:last-child):after {
+    content: ','; }
+
+#work article.project img {
+  height: 300px;
+  margin: 20px; }

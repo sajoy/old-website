@@ -3,6 +3,7 @@ Array.prototype.getRandom = function () {
 };
 
 export function decorateLists () {
+    console.log('decorating');
     const toDecorate = document.querySelectorAll('.random-decor li');
     const classes = [
         {used: 0, class: 'left-stars'},

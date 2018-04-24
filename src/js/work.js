@@ -1,14 +1,10 @@
-import {decorateLists} from './randomDecor';
 import Projects from './projects';
 
 const app = {
     init: function () {
-        decorateLists();
         this.loadProjects();
     },
-    loadProjects: function () {
-        Projects.loadComponent();
-        
+    loadProjects: function () {        
         const projects = new Projects();
         projects.fetch();
     }

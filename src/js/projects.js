@@ -1,21 +1,5 @@
-class ProjectDisplay extends HTMLElement {
-    constructor (data) {
-        super();
-        this.checking = 'WOAH';
-        this.initTemplate();
-    }
+import {decorateLists} from './randomDecor';
 
-    initTemplate () {
-        const template = document.querySelector('#project-template');
-        this.root = this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
-    }
-
-    fill (data) {
-        console.log('yayyy');
-        console.log(data);
-    }
-}
 
 class Project {
     constructor (data) {
@@ -25,18 +9,21 @@ class Project {
             this.data[key] = data[key];
         }
 
-        this.render();
+        // this.render();
     }
 
     render () {
-        this.element = document.createElement('project-display');
+        const template = document.querySelector('#project-template');
+        this.element = document.importNode(template.content, true);
+        
         for(let name in this.data) {
             let property = this.data[name];
-            let element = this.element.root.querySelector(`[data-content="${name}"]`);
+            let element = this.element.querySelector(`[data-content="${name}"]`);
 
             if (name === 'image') {
                 element.setAttribute('src', `./imgs/${property}`);
                 element.setAttribute('alt', 'gif of project');
+                element.setAttribute('target', '_blank');
                 continue;
             }
 
@@ -54,8 +41,6 @@ class Project {
 
         const projectHolder = document.querySelector('#work section');
         projectHolder.appendChild(this.element);
-
-
 
 
         function createLiContent (item) {
@@ -81,13 +66,11 @@ class Projects {
     
     load (data) {
         this.list = data.map(proj => new Project(proj));
-
-        // console.log(this.list);
-    }
-
-    static loadComponent () {
-        window.customElements.define('project-display', ProjectDisplay);
-        console.log('element loaded');
+        this.list.forEach(proj => {
+            proj.render();
+        });
+        
+        decorateLists();
     }
 }
 
