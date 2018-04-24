@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently -k \"npm run sass\" \"npm run compile:html\" \"lite-server\"",
-    "sass": "node-sass -w --include-path sass scss/ -o css/",
-    "compile:html": "html-includes --src src --dest . --watch"
+    "sass": "node-sass -w --include-path sass src/scss/ -o css/",
+    "compile:html": "html-includes --src src --dest . --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
     "concurrently": "^3.5.1",
     "html-includes": "^2.1.0",
     "lite-server": "^2.3.0",
-    "node-sass": "^4.8.3"
+    "node-sass": "^4.8.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }
