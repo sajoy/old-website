@@ -135,8 +135,29 @@ ul {
     padding: 0;
     line-height: 1.5rem;
 
-    &.random-decor {
+    &.random-decor li {
+        $decor: (
+            left-stars: ('** ',''),
+            left-colons: (':: ', ''),
+            left-under: ('__ ', ''),
+            right-colons: ('', ' ::'),
+            right-arrows: ('', ' <<<'),
+            squiggles: ('~ ', ' ~'),
+            colons: (':: ', ' ::'),
+            slashes: ('// ', ' //'),
+            equals: ('== ', ' =='),
+            squares: ('[ ', ' ]')
+        );
         
+        @each $name, $content in $decor {
+            $before-content: nth($content, 1);
+            $after-content: nth($content, 2);
+            
+            &.#{$name} {
+                &:before { content: $before-content; }
+                &:after { content: $after-content; }
+            }
+        }
     }
 }
 

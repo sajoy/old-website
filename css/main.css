@@ -94,6 +94,46 @@ ul {
   list-style: none;
   padding: 0;
   line-height: 1.5rem; }
+  ul.random-decor li.left-stars:before {
+    content: "** "; }
+  ul.random-decor li.left-stars:after {
+    content: ""; }
+  ul.random-decor li.left-colons:before {
+    content: ":: "; }
+  ul.random-decor li.left-colons:after {
+    content: ""; }
+  ul.random-decor li.left-under:before {
+    content: "__ "; }
+  ul.random-decor li.left-under:after {
+    content: ""; }
+  ul.random-decor li.right-colons:before {
+    content: ""; }
+  ul.random-decor li.right-colons:after {
+    content: " ::"; }
+  ul.random-decor li.right-arrows:before {
+    content: ""; }
+  ul.random-decor li.right-arrows:after {
+    content: " <<<"; }
+  ul.random-decor li.squiggles:before {
+    content: "~ "; }
+  ul.random-decor li.squiggles:after {
+    content: " ~"; }
+  ul.random-decor li.colons:before {
+    content: ":: "; }
+  ul.random-decor li.colons:after {
+    content: " ::"; }
+  ul.random-decor li.slashes:before {
+    content: "// "; }
+  ul.random-decor li.slashes:after {
+    content: " //"; }
+  ul.random-decor li.equals:before {
+    content: "== "; }
+  ul.random-decor li.equals:after {
+    content: " =="; }
+  ul.random-decor li.squares:before {
+    content: "[ "; }
+  ul.random-decor li.squares:after {
+    content: " ]"; }
 
 a {
   color: var(--text-color); }
