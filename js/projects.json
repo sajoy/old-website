@@ -1,0 +1,97 @@
+[
+    {
+        "title": "Cardsmith",
+        "timeRange": "2015-2017",
+        "stack": [
+            "RactiveJS",
+            "SCSS",
+            "SCSS",
+            "NodeJS",
+            "Express",
+            "Heroku",
+            "Firebase"
+        ],
+        "imgName": "cardsmith.gif",
+        "description": "At Cardsmith I did a lot of fun stuff like work on an app and also a marketing website. I did user research in the form of user interviews, provided customer service, helped brainstorm feature ideas and implementations and more.",
+        "links": [
+            {
+                "text": "website",
+                "link": "http://cardsmith.co"
+            },
+            {
+                "text": "web app demo",
+                "link": "https://gocardsmith.co/?play=true#boards/-KSqRub4HirRxvXF77gS"
+            }
+        ]
+    },
+    {
+        "title": "Scratch Tab",
+        "timeRange": "2016",
+        "stack": [
+            "Vanilla JS",
+            "LocalStorage"
+        ],
+        "imgName": "scratch.gif",
+        "description": "Scratch Tab is a new tab chrome extension that transforms your new tab into an electronic scratch pad; for your thoughts, those links that you want to revisit later but don't want to bookmark, and reminders to take out the trash. Available on the Chrome Web Store.",
+        "links": [
+            {
+                "text": "github repo",
+                "link": "https://github.com/sajoy/scratch-tab"
+            },
+            {
+                "text": "in the chrome web store",
+                "link": "https://chrome.google.com/webstore/detail/scratch-tab/gaehhklohpncohpacfhddemnekcahfim?hl=en-US"
+            },
+            {
+                "text": "demo",
+                "link": "https://sajoy.github.io/scratch-tab/"
+            }
+        ]
+    },
+    {
+        "title": "Console.lol",
+        "timeRange": "2018 (in progress)",
+        "stack": [
+            "Vanilla JS"
+        ],
+        "imgName": "console.gif",
+        "description": "Console.lol is an open source library for making debugging a little brighter. It offers visually stimulating console.logs to add visual hierarchy and fun to your browser's console. Will soon be available via NPM.",
+        "links": [
+            {
+                "text": "github repo",
+                "link": "https://github.com/sajoy/console-dot-lol"
+            },
+            {
+                "text": "on npm (soon)",
+                "link": "#"
+            },
+            {
+                "text": "website",
+                "link": "https://www.themostawful.com/console-dot-lol/"
+            }
+        ]
+    },
+    {
+        "title": "Operations",
+        "timeRange": "2018 (in progress)",
+        "stack": [
+            "Vanilla JS",
+            "NodeJS",
+            "Express",
+            "GraphQL",
+            "PostgreSQL"
+        ],
+        "imgName": "operations.gif",
+        "description": "Operations is a web app designed for recording daily activities and expenses for personal reflection. It was also a learning project for implementing a GraphQL API.",
+        "links": [
+            {
+                "text": "github repo (soon)",
+                "link": "#"
+            },
+            {
+                "text": "demo (soon)",
+                "link": "#"
+            }
+        ]
+    }
+]

@@ -27,4 +27,3 @@ Visit it at [sajoy.github.io](http://sajoy.github.io)
 #### resume
 1. add pdf version
 1. add printable css
-1. add projects and contributions
