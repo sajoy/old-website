@@ -1,0 +1,43 @@
+<template id="project-template">
+    <style>
+        ul.stack li {
+            display: inline-block;
+        }
+
+        ul.stack li:not(:last-child):after {
+            content: ','
+        }
+
+        img {
+            height: 300px;
+        }
+        
+        /* 
+            issue: need to style the component here
+            but there's a lot of styles I want to use from elsewhere
+
+            solutions
+            - repeat css ):
+            - componentize the random decorated list on its own /:
+            - not use components at all, just copy template |:
+        
+        */
+    </style>
+
+    <article>
+        <section>
+            <h2 data-content="title">
+            </h2>
+            <ul class="stack" data-content="stack">
+                <lh>built with</lh>
+            </ul>
+            <img data-content="image" src="#" alt="gif of project in action">
+            <p data-content="year"></p>
+            <p data-content="description">
+            </p>
+            <ul class="random-decor" data-content="links">
+            </ul>
+        </section>
+    </article>
+    <p class="dash">---</p>
+</template>

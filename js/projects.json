@@ -1,7 +1,7 @@
 [
     {
         "title": "Cardsmith",
-        "timeRange": "2015-2017",
+        "year": "2015-2017",
         "stack": [
             "RactiveJS",
             "SCSS",
@@ -11,7 +11,7 @@
             "Heroku",
             "Firebase"
         ],
-        "imgName": "cardsmith.gif",
+        "image": "cardsmith.gif",
         "description": "At Cardsmith I did a lot of fun stuff like work on an app and also a marketing website. I did user research in the form of user interviews, provided customer service, helped brainstorm feature ideas and implementations and more.",
         "links": [
             {
@@ -26,12 +26,12 @@
     },
     {
         "title": "Scratch Tab",
-        "timeRange": "2016",
+        "year": "2016",
         "stack": [
             "Vanilla JS",
             "LocalStorage"
         ],
-        "imgName": "scratch.gif",
+        "image": "scratch.gif",
         "description": "Scratch Tab is a new tab chrome extension that transforms your new tab into an electronic scratch pad; for your thoughts, those links that you want to revisit later but don't want to bookmark, and reminders to take out the trash. Available on the Chrome Web Store.",
         "links": [
             {
@@ -50,11 +50,11 @@
     },
     {
         "title": "Console.lol",
-        "timeRange": "2018 (in progress)",
+        "year": "2018 (in progress)",
         "stack": [
             "Vanilla JS"
         ],
-        "imgName": "console.gif",
+        "image": "console.gif",
         "description": "Console.lol is an open source library for making debugging a little brighter. It offers visually stimulating console.logs to add visual hierarchy and fun to your browser's console. Will soon be available via NPM.",
         "links": [
             {
@@ -73,7 +73,7 @@
     },
     {
         "title": "Operations",
-        "timeRange": "2018 (in progress)",
+        "year": "2018 (in progress)",
         "stack": [
             "Vanilla JS",
             "NodeJS",
@@ -81,7 +81,7 @@
             "GraphQL",
             "PostgreSQL"
         ],
-        "imgName": "operations.gif",
+        "image": "operations.gif",
         "description": "Operations is a web app designed for recording daily activities and expenses for personal reflection. It was also a learning project for implementing a GraphQL API.",
         "links": [
             {

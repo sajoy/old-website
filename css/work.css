@@ -1,7 +1,0 @@
-#work article ul.stack li {
-  display: inline-block; }
-  #work article ul.stack li:not(:last-child):after {
-    content: ','; }
-
-#work article img {
-  height: 300px; }

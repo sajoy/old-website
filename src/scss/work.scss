@@ -1,14 +1,5 @@
 #work {
-    article {
-        ul.stack li {
-            display: inline-block;
+    project-display {
 
-            &:not(:last-child):after {
-                content: ','
-            }
-        }
-        img {
-            height: 300px;
-        }
     }
 }
