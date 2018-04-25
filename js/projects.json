@@ -5,7 +5,6 @@
         "stack": [
             "RactiveJS",
             "SCSS",
-            "SCSS",
             "NodeJS",
             "Express",
             "Heroku",
@@ -19,7 +18,7 @@
                 "link": "http://cardsmith.co"
             },
             {
-                "text": "web app demo",
+                "text": "interactive demo",
                 "link": "https://gocardsmith.co/?play=true#boards/-KSqRub4HirRxvXF77gS"
             }
         ]
@@ -43,7 +42,7 @@
                 "link": "https://chrome.google.com/webstore/detail/scratch-tab/gaehhklohpncohpacfhddemnekcahfim?hl=en-US"
             },
             {
-                "text": "demo",
+                "text": "interactive demo",
                 "link": "https://sajoy.github.io/scratch-tab/"
             }
         ]
@@ -75,6 +74,8 @@
         "title": "Operations",
         "year": "2018 (in progress)",
         "stack": [
+            "Webpack",
+            "SCSS",
             "Vanilla JS",
             "NodeJS",
             "Express",
@@ -82,15 +83,11 @@
             "PostgreSQL"
         ],
         "image": "operations.gif",
-        "description": "Operations is a web app designed for recording daily activities and expenses for personal reflection. It was also a learning project for implementing a GraphQL API.",
+        "description": "Operations is a web app designed for recording daily activities and expenses for personal reflection. It was also a learning project for implementing a GraphQL API over a Postgres database.",
         "links": [
             {
-                "text": "github repo (soon)",
-                "link": "#"
-            },
-            {
-                "text": "demo (soon)",
-                "link": "#"
+                "text": "github repo",
+                "link": "https://github.com/sajoy/operations/"
             }
         ]
     }

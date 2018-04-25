@@ -23,7 +23,6 @@ class Project {
             if (name === 'image') {
                 element.setAttribute('src', `./imgs/${property}`);
                 element.setAttribute('alt', 'gif of project');
-                element.setAttribute('target', '_blank');
                 continue;
             }
 
@@ -46,7 +45,7 @@ class Project {
         function createLiContent (item) {
             if (typeof item === 'string') return item;
 
-            return `<a href="${item.link}">${item.text}</a>`;
+            return `<a href="${item.link}" target="_blank">${item.text}</a>`;
             // returning a string bc returning the html element doesn't work
             // when added to the LI, it only adds the URL, not the whole a tag
 

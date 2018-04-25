@@ -16,5 +16,10 @@
     content: ','; }
 
 #work article.project img {
+  box-shadow: 20px 10px 0 0;
+  transition: all .6s ease-out;
   width: 450px;
   margin: 20px; }
+  #work article.project img:hover {
+    transform: scale(2);
+    box-shadow: 0 0 0 10px; }
