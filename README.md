@@ -16,13 +16,8 @@ Visit it at [sajoy.github.io](http://sajoy.github.io)
 1. mobile styles pls dude
 
 #### portfolio
-1. templatize projects
-1. add project details - json file
-    1. cardsmith
-    1. console.lol
-    1. scratch tab
-    1. french fry new tab session count
-    1. operations
+1. add images
+1. revise copy
 
 #### resume
 1. add pdf version
