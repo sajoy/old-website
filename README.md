@@ -14,6 +14,7 @@ Visit it at [sajoy.github.io](http://sajoy.github.io)
 
 #### general
 1. mobile styles pls dude
+1. set up work flow so dev on a different branch then build and commit that build to master branch
 
 #### portfolio
 1. add images
