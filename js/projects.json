@@ -1,17 +1,17 @@
 [
     {
         "title": "Cardsmith",
+        "category": "web",
         "year": "2015-2017",
         "stack": [
             "RactiveJS",
             "SCSS",
             "NodeJS",
-            "Express",
             "Heroku",
             "Firebase"
         ],
         "image": "cardsmith.gif",
-        "description": "At Cardsmith I did a lot of fun stuff like work on an app and also a marketing website. I did user research in the form of user interviews, provided customer service, helped brainstorm feature ideas and implementations and more.",
+        "description": "Cardsmith is a visual project management tool inspired by sticky notes on a whiteboard. I helped add numerous features to the app including board sharing, the checklist field, and those cute card icons.",
         "links": [
             {
                 "text": "website",
@@ -25,13 +25,14 @@
     },
     {
         "title": "Scratch Tab",
+        "category": "web",
         "year": "2016",
         "stack": [
             "Vanilla JS",
             "LocalStorage"
         ],
         "image": "scratch.gif",
-        "description": "Scratch Tab is a new tab chrome extension that transforms your new tab into an electronic scratch pad; for your thoughts, those links that you want to revisit later but don't want to bookmark, and reminders to take out the trash. Available on the Chrome Web Store.",
+        "description": "Scratch Tab is a new tab chrome extension that transforms your new tab into an electronic scratch pad: for your thoughts, those links that you want to revisit later but don't want to bookmark, and reminders to take out the trash. Available in the Chrome Web Store.",
         "links": [
             {
                 "text": "github repo",
@@ -49,20 +50,17 @@
     },
     {
         "title": "Console.lol",
+        "category": "web",
         "year": "2018 (in progress)",
         "stack": [
             "Vanilla JS"
         ],
         "image": "console.gif",
-        "description": "Console.lol is an open source library for making debugging a little brighter. It offers visually stimulating console.logs to add visual hierarchy and fun to your browser's console. Will soon be available via NPM.",
+        "description": "Console.lol is an open source library for making debugging a little brighter. It offers visually stimulating console.logs to add visual hierarchy and fun to your browser's console. Will soon be available via CDN and NPM.",
         "links": [
             {
                 "text": "github repo",
                 "link": "https://github.com/sajoy/console-dot-lol"
-            },
-            {
-                "text": "on npm (soon)",
-                "link": "#"
             },
             {
                 "text": "website",
@@ -72,6 +70,7 @@
     },
     {
         "title": "Operations",
+        "category": "web",
         "year": "2018 (in progress)",
         "stack": [
             "Webpack",
@@ -88,6 +87,40 @@
             {
                 "text": "github repo",
                 "link": "https://github.com/sajoy/operations/"
+            }
+        ]
+    },
+    {
+        "title": "kissHandlers.js",
+        "category": "writing",
+        "year": "2018",
+        "stack": [
+            "personification",
+            "alliteration",
+            "repetition"
+        ],
+        "image": "kisshandlers.PNG",
+        "description": "A poem I wrote in JavaScript. Published in the Programming Languages issue of <em>Increment</em>.",
+        "links": [
+            {
+                "text": "Read kissHandlers.js",
+                "link": "https://increment.com/programming-languages/code-poetry/"
+            }
+        ]
+    },
+    {
+        "title": "#FF3399",
+        "category": "writing",
+        "year": "2016",
+        "stack": [
+            "nostalgia"
+        ],
+        "image": "ff3399.PNG",
+        "description": "A short piece (~216 words) I wrote for <em>Web Safe 2k16</em>.",
+        "links": [
+            {
+                "text": "Read #FF3399",
+                "link": "http://websafe2k16.com/FF3399"
             }
         ]
     }

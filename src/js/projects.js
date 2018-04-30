@@ -8,8 +8,7 @@ class Project {
         for (let key in data) {
             this.data[key] = data[key];
         }
-
-        // this.render();
+        console.log(this);
     }
 
     render () {
@@ -18,6 +17,13 @@ class Project {
         
         for(let name in this.data) {
             let property = this.data[name];
+
+            if (name === 'category') {
+                let article = this.element.querySelector('article');
+                article.setAttribute('data-category', property);
+                continue;
+            }
+
             let element = this.element.querySelector(`[data-content="${name}"]`);
 
             if (name === 'image') {
@@ -35,7 +41,7 @@ class Project {
                 continue;
             }
 
-            element.textContent = property;
+            element.innerHTML = property;
         };
 
         const projectHolder = document.querySelector('#work section');
@@ -64,7 +70,10 @@ class Projects {
     }
     
     load (data) {
-        this.list = data.map(proj => new Project(proj));
+        this.list = data.sort((a, b) => {
+                            return parseInt(a.year) - parseInt(b.year);
+                        })
+                        .map(proj => new Project(proj));
         this.list.forEach(proj => {
             proj.render();
         });
