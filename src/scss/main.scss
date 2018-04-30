@@ -9,6 +9,7 @@ $purple: #dcbbff;
 $blue: #bbe8ff;
 
 body {
+    // min-width: 600px;
     font-family: monospace;
     font-size: 1.25rem;
     color: var(--text-color);
@@ -197,4 +198,25 @@ canvas {
     0%{background-position:0% 50%}
     50%{background-position:100% 51%}
     100%{background-position:0% 50%}
+}
+
+
+
+@media (max-width: 900px) {
+    main:not(#resume) {
+        margin-top: 50%;
+        flex-direction: column;
+
+        #logo {
+                margin: -50px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: scale(.5);
+        }
+
+        p {
+            min-width: initial;
+        }
+    }
 }
