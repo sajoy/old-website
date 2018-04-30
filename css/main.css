@@ -174,3 +174,16 @@ canvas {
     background-position: 100% 51%; }
   100% {
     background-position: 0% 50%; } }
+
+@media (max-width: 900px) {
+  main:not(#resume) {
+    margin-top: 50%;
+    flex-direction: column; }
+    main:not(#resume) #logo {
+      margin: -50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: scale(0.5); }
+    main:not(#resume) p {
+      min-width: initial; } }

@@ -23,3 +23,12 @@
   #work article.project img:hover {
     transform: scale(2);
     box-shadow: 0 0 0 10px; }
+
+@media (max-width: 600px) {
+  #work section {
+    width: initial; }
+  #work article.project img {
+    width: 300px;
+    margin: 20px 0; }
+    #work article.project img:hover {
+      transform: none; } }
