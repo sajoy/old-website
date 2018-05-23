@@ -62,7 +62,7 @@ main:not(#resume) {
     height: var(--dimension);
     width: var(--dimension);
     position: sticky;
-    -webkit-sticky-position: sticky;
+    position: -webkit-sticky;
     top: 50px;
 
     h1 {
