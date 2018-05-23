@@ -43,6 +43,7 @@ main:not(#resume) {
   height: var(--dimension);
   width: var(--dimension);
   position: sticky;
+  position: -webkit-sticky;
   top: 50px; }
   #logo h1 {
     font-family: sans-serif;
