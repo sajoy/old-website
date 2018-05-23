@@ -5,6 +5,9 @@ const app = {
         decorateLists();
         this.setAnimation();
         this.handleButtons();
+
+        // TODO polyfill for sticky
+        // https://github.com/wilddeer/stickyfill
     },
     setAnimation: function () {
         // using anime.js
