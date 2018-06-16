@@ -123,5 +123,25 @@
                 "link": "http://websafe2k16.com/FF3399"
             }
         ]
+    },
+    {
+        "title": "Fry Tally",
+        "category": "web",
+        "year": "2018",
+        "stack": [
+            "Vanilla JS, LocalStorage"
+        ],
+        "image": "fries.gif",
+        "description": "A new tab chrome extension that tallies how many tabs you've opened... with french fries. Available in the Chrome Web Store.",
+        "links": [
+            {
+                "text": "in the chrome web store",
+                "link": "https://chrome.google.com/webstore/detail/fry-tally/oapkdheokkamcpllihajojjmonfclfeo"
+            },
+            {
+                "text": "github repo",
+                "link": "https://github.com/sajoy/fry-tally"
+            }
+        ]
     }
 ]
