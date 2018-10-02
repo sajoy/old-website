@@ -1,5 +1,22 @@
 [
     {
+        "title": "Publishing your first npm package",
+        "category": "web",
+        "year": "2018",
+        "stack": [
+            "npm",
+            "penguins"
+        ],
+        "image": "npmtalk.PNG",
+        "description": "I gave a talk at PDX Node on how to publish an npm package.",
+        "links": [
+            {
+                "text": "video",
+                "link": "https://www.youtube.com/watch?v=YLXfiBDvaj4"
+            }
+        ]
+    },
+    {
         "title": "Cardsmith",
         "category": "web",
         "year": "2015-2017",
